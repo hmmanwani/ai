@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings - Medconverge OCR</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="../style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <nav class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+        <div class="position-sticky pt-3">
+          <div class="text-center mb-4">
+            <h5 class="text-white fw-bold">
+              <i class="bi bi-shield-check me-2"></i>Admin Panel
+            </h5>
+          </div>
+          
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">
+                <i class="bi bi-speedometer2"></i>Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="users.html">
+                <i class="bi bi-people"></i>User Management
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="files.html">
+                <i class="bi bi-file-earmark-text"></i>File Management
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="settings.html">
+                <i class="bi bi-gear"></i>Settings
+              </a>
+            </li>
+            <li class="nav-item mt-4">
+              <a class="nav-link" href="login.html">
+                <i class="bi bi-box-arrow-right"></i>Logout
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Main content -->
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2">Settings</h1>
+        </div>
+
+        <div class="row">
+          <!-- Change Password -->
+          <div class="col-lg-6 mb-4">
+            <div class="card dashboard-card">
+              <div class="card-header">
+                <h6 class="m-0 font-weight-bold text-primary">
+                  <i class="bi bi-key me-2"></i>Change Password
+                </h6>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="currentPassword" class="form-label">Current Password</label>
+                    <input type="password" class="form-control" id="currentPassword" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="newPassword" class="form-label">New Password</label>
+                    <input type="password" class="form-control" id="newPassword" required>
+                    <div class="form-text">Password must be at least 8 characters long</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">Confirm New Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-check-circle me-2"></i>Update Password
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- System Settings -->
+          <div class="col-lg-6 mb-4">
+            <div class="card dashboard-card">
+              <div class="card-header">
+                <h6 class="m-0 font-weight-bold text-primary">
+                  <i class="bi bi-gear me-2"></i>System Settings
+                </h6>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="maxFileSize" class="form-label">Maximum File Size (MB)</label>
+                    <input type="number" class="form-control" id="maxFileSize" value="10" min="1" max="50">
+                  </div>
+                  <div class="mb-3">
+                    <label for="allowedFormats" class="form-label">Allowed File Formats</label>
+                    <select class="form-select" id="allowedFormats" multiple>
+                      <option value="pdf" selected>PDF</option>
+                      <option value="jpg" selected>JPG</option>
+                      <option value="png" selected>PNG</option>
+                      <option value="tiff">TIFF</option>
+                      <option value="bmp">BMP</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="ocrTimeout" class="form-label">OCR Processing Timeout (seconds)</label>
+                    <input type="number" class="form-control" id="ocrTimeout" value="300" min="60" max="1800">
+                  </div>
+                  <div class="mb-3">
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="autoDelete" checked>
+                      <label class="form-check-label" for="autoDelete">
+                        Auto-delete files after 30 days
+                      </label>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="emailNotifications" checked>
+                      <label class="form-check-label" for="emailNotifications">
+                        Send email notifications
+                      </label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-save me-2"></i>Save Settings
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Security Settings -->
+          <div class="col-lg-6 mb-4">
+            <div class="card dashboard-card">
+              <div class="card-header">
+                <h6 class="m-0 font-weight-bold text-primary">
+                  <i class="bi bi-shield-lock me-2"></i>Security Settings
+                </h6>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="sessionTimeout" class="form-label">Session Timeout (minutes)</label>
+                    <input type="number" class="form-control" id="sessionTimeout" value="30" min="5" max="480">
+                  </div>
+                  <div class="mb-3">
+                    <label for="maxLoginAttempts" class="form-label">Maximum Login Attempts</label>
+                    <input type="number" class="form-control" id="maxLoginAttempts" value="5" min="3" max="10">
+                  </div>
+                  <div class="mb-3">
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="twoFactorAuth">
+                      <label class="form-check-label" for="twoFactorAuth">
+                        Enable Two-Factor Authentication
+                      </label>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="passwordHistory" checked>
+                      <label class="form-check-label" for="passwordHistory">
+                        Enforce password history (last 5 passwords)
+                      </label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-save me-2"></i>Save Security Settings
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backup & Maintenance -->
+          <div class="col-lg-6 mb-4">
+            <div class="card dashboard-card">
+              <div class="card-header">
+                <h6 class="m-0 font-weight-bold text-primary">
+                  <i class="bi bi-cloud-arrow-up me-2"></i>Backup & Maintenance
+                </h6>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label class="form-label">Database Backup</label>
+                  <div class="d-grid gap-2">
+                    <button type="button" class="btn btn-outline-primary">
+                      <i class="bi bi-download me-2"></i>Create Backup
+                    </button>
+                    <button type="button" class="btn btn-outline-success">
+                      <i class="bi bi-upload me-2"></i>Restore Backup
+                    </button>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">System Maintenance</label>
+                  <div class="d-grid gap-2">
+                    <button type="button" class="btn btn-outline-warning">
+                      <i class="bi bi-tools me-2"></i>Clear Cache
+                    </button>
+                    <button type="button" class="btn btn-outline-info">
+                      <i class="bi bi-arrow-clockwise me-2"></i>Optimize Database
+                    </button>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="alert alert-info">
+                    <i class="bi bi-info-circle me-2"></i>
+                    <strong>Last Backup:</strong> 2024-01-15 10:30 AM<br>
+                    <strong>Next Scheduled:</strong> 2024-01-16 02:00 AM
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

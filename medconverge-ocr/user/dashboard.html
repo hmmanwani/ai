@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard - Medconverge OCR</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="../style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">
+        <i class="bi bi-file-earmark-text me-2"></i>Medconverge OCR
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="dashboard.html">
+              <i class="bi bi-speedometer2 me-1"></i>Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="upload.html">
+              <i class="bi bi-upload me-1"></i>Upload Files
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="results.html">
+              <i class="bi bi-file-text me-1"></i>OCR Results
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="files.html">
+              <i class="bi bi-folder me-1"></i>My Files
+            </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              <i class="bi bi-person-circle me-1"></i>John Doe
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="profile.html">
+                <i class="bi bi-person me-2"></i>Profile Settings
+              </a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="login.html">
+                <i class="bi bi-box-arrow-right me-2"></i>Logout
+              </a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid mt-4">
+    <!-- Welcome Section -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="card dashboard-card">
+          <div class="card-body">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <h4 class="fw-bold">Welcome back, John Doe!</h4>
+                <p class="text-muted mb-0">Here's an overview of your OCR activities and recent files.</p>
+              </div>
+              <div class="col-md-4 text-end">
+                <a href="upload.html" class="btn btn-success">
+                  <i class="bi bi-plus-circle me-2"></i>Upload New File
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="row mb-4">
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card dashboard-card border-left-success h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                  Total Files</div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">24</div>
+              </div>
+              <div class="col-auto">
+                <i class="bi bi-file-earmark-text fs-1 text-success"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card dashboard-card border-left-primary h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                  Processed Files</div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+              </div>
+              <div class="col-auto">
+                <i class="bi bi-check-circle fs-1 text-primary"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card dashboard-card border-left-warning h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                  Pending Files</div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">3</div>
+              </div>
+              <div class="col-auto">
+                <i class="bi bi-clock fs-1 text-warning"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card dashboard-card border-left-info h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                  Storage Used</div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">45.2 MB</div>
+              </div>
+              <div class="col-auto">
+                <i class="bi bi-hdd fs-1 text-info"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Activity and Quick Actions -->
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="card dashboard-card">
+          <div class="card-header">
+            <h6 class="m-0 font-weight-bold text-primary">Recent Files</h6>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>File Name</th>
+                    <th>Upload Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-file-earmark-pdf text-danger fs-4 me-3"></i>
+                        <div>
+                          <div class="fw-bold">medical_report_001.pdf</div>
+                          <small class="text-muted">2.4 MB</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td>2024-01-15 14:30</td>
+                    <td><span class="badge bg-success">Completed</span></td>
+                    <td>
+                      <div class="btn-group" role="group">
+                        <a href="results.html" class="btn btn-sm btn-outline-primary">
+                          <i class="bi bi-eye"></i>
+                        </a>
+                        <button type="button" class="btn btn-sm btn-outline-success">
+                          <i class="bi bi-download"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-file-earmark-image text-success fs-4 me-3"></i>
+                        <div>
+                          <div class="fw-bold">patient_records_002.jpg</div>
+                          <small class="text-muted">1.8 MB</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td>2024-01-15 13:45</td>
+                    <td><span class="badge bg-warning">Processing</span></td>
+                    <td>
+                      <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" disabled>
+                          <i class="bi bi-eye"></i>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-outline-success">
+                          <i class="bi bi-download"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-file-earmark-pdf text-danger fs-4 me-3"></i>
+                        <div>
+                          <div class="fw-bold">lab_results_003.pdf</div>
+                          <small class="text-muted">3.1 MB</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td>2024-01-15 12:20</td>
+                    <td><span class="badge bg-info">Pending</span></td>
+                    <td>
+                      <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" disabled>
+                          <i class="bi bi-eye"></i>
+                        </button>
+                        <button type="button" class="btn btn-sm btn-outline-success">
+                          <i class="bi bi-download"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card dashboard-card">
+          <div class="card-header">
+            <h6 class="m-0 font-weight-bold text-primary">Quick Actions</h6>
+          </div>
+          <div class="card-body">
+            <div class="d-grid gap-2">
+              <a href="upload.html" class="btn btn-success">
+                <i class="bi bi-upload me-2"></i>Upload New File
+              </a>
+              <a href="results.html" class="btn btn-outline-primary">
+                <i class="bi bi-file-text me-2"></i>View OCR Results
+              </a>
+              <a href="files.html" class="btn btn-outline-info">
+                <i class="bi bi-folder me-2"></i>My Files
+              </a>
+              <a href="profile.html" class="btn btn-outline-secondary">
+                <i class="bi bi-person me-2"></i>Profile Settings
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card dashboard-card mt-4">
+          <div class="card-header">
+            <h6 class="m-0 font-weight-bold text-primary">System Status</h6>
+          </div>
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span>OCR Service</span>
+              <span class="badge bg-success">Online</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span>File Processing</span>
+              <span class="badge bg-success">Active</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span>Storage</span>
+              <span class="badge bg-warning">45% Used</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <span>Last Backup</span>
+              <small class="text-muted">2 hours ago</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

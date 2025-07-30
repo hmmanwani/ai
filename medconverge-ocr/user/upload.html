@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Files - Medconverge OCR</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="../style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">
+        <i class="bi bi-file-earmark-text me-2"></i>Medconverge OCR
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html">
+              <i class="bi bi-speedometer2 me-1"></i>Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="upload.html">
+              <i class="bi bi-upload me-1"></i>Upload Files
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="results.html">
+              <i class="bi bi-file-text me-1"></i>OCR Results
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="files.html">
+              <i class="bi bi-folder me-1"></i>My Files
+            </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              <i class="bi bi-person-circle me-1"></i>John Doe
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="profile.html">
+                <i class="bi bi-person me-2"></i>Profile Settings
+              </a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="login.html">
+                <i class="bi bi-box-arrow-right me-2"></i>Logout
+              </a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid mt-4">
+    <div class="row">
+      <div class="col-lg-8">
+        <!-- Upload Area -->
+        <div class="card dashboard-card">
+          <div class="card-header">
+            <h6 class="m-0 font-weight-bold text-primary">
+              <i class="bi bi-upload me-2"></i>Upload Files for OCR Processing
+            </h6>
+          </div>
+          <div class="card-body">
+            <div class="upload-area" id="uploadArea">
+              <i class="bi bi-cloud-upload"></i>
+              <h5 class="mb-3">Drag and drop files here</h5>
+              <p class="text-muted mb-4">or click to browse files</p>
+              <input type="file" id="fileInput" multiple accept=".pdf,.jpg,.jpeg,.png,.tiff,.bmp" style="display: none;">
+              <button type="button" class="btn btn-primary" onclick="document.getElementById('fileInput').click()">
+                <i class="bi bi-folder2-open me-2"></i>Choose Files
+              </button>
+            </div>
+
+            <!-- File List -->
+            <div id="fileList" class="mt-4" style="display: none;">
+              <h6 class="mb-3">Selected Files:</h6>
+              <div id="fileItems"></div>
+              <div class="mt-3">
+                <button type="button" class="btn btn-success" id="uploadBtn">
+                  <i class="bi bi-upload me-2"></i>Start Upload
+                </button>
+                <button type="button" class="btn btn-outline-secondary ms-2" id="clearBtn">
+                  <i class="bi bi-trash me-2"></i>Clear All
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Upload Progress -->
+        <div class="card dashboard-card mt-4" id="progressCard" style="display: none;">
+          <div class="card-header">
+            <h6 class="m-0 font-weight-bold text-primary">
+              <i class="bi bi-arrow-clockwise me-2"></i>Upload Progress
+            </h6>
+          </div>
+          <div class="card-body">
+            <div class="mb-3">
+              <div class="d-flex justify-content-between mb-1">
+                <span>medical_report_001.pdf</span>
+                <span>75%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="alert alert-info">
+              <i class="bi bi-info-circle me-2"></i>
+              Files are being uploaded. OCR processing will begin automatically once upload is complete.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <!-- Instructions -->
+        <div class="card dashboard-card">
+          <div class="card-header">
+            <h6 class="m-0 font-weight-bold text-primary">
+              <i class="bi bi-info-circle me-2"></i>Upload Instructions
+            </h6>
+          </div>
+          <div class="card-body">
+            <div class="mb-3">
+              <h6>Supported File Types:</h6>
+              <ul class="list-unstyled">
+                <li><i class="bi bi-file-earmark-pdf text-danger me-2"></i>PDF Documents</li>
+                <li><i class="bi bi-file-earmark-image text-success me-2"></i>Images (JPG, PNG, TIFF, BMP)</li>
+              </ul>
+            </div>
+            <div class="mb-3">
+              <h6>File Size Limits:</h6>
+              <ul class="list-unstyled">
+                <li><i class="bi bi-check-circle text-success me-2"></i>Maximum: 10 MB per file</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i>Multiple files allowed</li>
+              </ul>
+            </div>
+            <div class="mb-3">
+              <h6>OCR Processing:</h6>
+              <ul class="list-unstyled">
+                <li><i class="bi bi-lightning text-warning me-2"></i>Automatic text extraction</li>
+                <li><i class="bi bi-clock text-info me-2"></i>Processing time: 1-5 minutes</li>
+                <li><i class="bi bi-bell text-primary me-2"></i>Email notification when complete</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Uploads -->
+        <div class="card dashboard-card mt-4">
+          <div class="card-header">
+            <h6 class="m-0 font-weight-bold text-primary">
+              <i class="bi bi-clock-history me-2"></i>Recent Uploads
+            </h6>
+          </div>
+          <div class="card-body">
+            <div class="list-group list-group-flush">
+              <div class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  <div class="fw-bold">medical_report_001.pdf</div>
+                  <small class="text-muted">2.4 MB</small>
+                </div>
+                <span class="badge bg-success">Completed</span>
+              </div>
+              <div class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  <div class="fw-bold">patient_records_002.jpg</div>
+                  <small class="text-muted">1.8 MB</small>
+                </div>
+                <span class="badge bg-warning">Processing</span>
+              </div>
+              <div class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  <div class="fw-bold">lab_results_003.pdf</div>
+                  <small class="text-muted">3.1 MB</small>
+                </div>
+                <span class="badge bg-info">Pending</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tips -->
+        <div class="card dashboard-card mt-4">
+          <div class="card-header">
+            <h6 class="m-0 font-weight-bold text-primary">
+              <i class="bi bi-lightbulb me-2"></i>Tips for Better OCR
+            </h6>
+          </div>
+          <div class="card-body">
+            <div class="alert alert-light">
+              <ul class="mb-0">
+                <li>Ensure documents are clear and well-lit</li>
+                <li>Use high-resolution images for better accuracy</li>
+                <li>Avoid handwritten text when possible</li>
+                <li>Check that text is not cut off or blurred</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // File upload functionality
+    const uploadArea = document.getElementById('uploadArea');
+    const fileInput = document.getElementById('fileInput');
+    const fileList = document.getElementById('fileList');
+    const fileItems = document.getElementById('fileItems');
+    const uploadBtn = document.getElementById('uploadBtn');
+    const clearBtn = document.getElementById('clearBtn');
+    const progressCard = document.getElementById('progressCard');
+
+    let selectedFiles = [];
+
+    // Drag and drop functionality
+    uploadArea.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      uploadArea.classList.add('dragover');
+    });
+
+    uploadArea.addEventListener('dragleave', () => {
+      uploadArea.classList.remove('dragover');
+    });
+
+    uploadArea.addEventListener('drop', (e) => {
+      e.preventDefault();
+      uploadArea.classList.remove('dragover');
+      const files = Array.from(e.dataTransfer.files);
+      handleFiles(files);
+    });
+
+    uploadArea.addEventListener('click', () => {
+      fileInput.click();
+    });
+
+    fileInput.addEventListener('change', (e) => {
+      const files = Array.from(e.target.files);
+      handleFiles(files);
+    });
+
+    function handleFiles(files) {
+      selectedFiles = [...selectedFiles, ...files];
+      displayFiles();
+    }
+
+    function displayFiles() {
+      if (selectedFiles.length > 0) {
+        fileList.style.display = 'block';
+        fileItems.innerHTML = '';
+        
+        selectedFiles.forEach((file, index) => {
+          const fileItem = document.createElement('div');
+          fileItem.className = 'd-flex justify-content-between align-items-center mb-2 p-2 border rounded';
+          fileItem.innerHTML = `
+            <div>
+              <i class="bi bi-file-earmark me-2"></i>
+              <span class="fw-bold">${file.name}</span>
+              <small class="text-muted">(${(file.size / 1024 / 1024).toFixed(2)} MB)</small>
+            </div>
+            <button type="button" class="btn btn-sm btn-outline-danger" onclick="removeFile(${index})">
+              <i class="bi bi-x"></i>
+            </button>
+          `;
+          fileItems.appendChild(fileItem);
+        });
+      } else {
+        fileList.style.display = 'none';
+      }
+    }
+
+    function removeFile(index) {
+      selectedFiles.splice(index, 1);
+      displayFiles();
+    }
+
+    clearBtn.addEventListener('click', () => {
+      selectedFiles = [];
+      displayFiles();
+      fileInput.value = '';
+    });
+
+    uploadBtn.addEventListener('click', () => {
+      if (selectedFiles.length > 0) {
+        progressCard.style.display = 'block';
+        // Simulate upload process
+        setTimeout(() => {
+          alert('Files uploaded successfully! OCR processing will begin shortly.');
+          progressCard.style.display = 'none';
+          selectedFiles = [];
+          displayFiles();
+          fileInput.value = '';
+        }, 3000);
+      }
+    });
+  </script>
+</body>
+</html> 

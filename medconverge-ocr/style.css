@@ -1,0 +1,246 @@
+/* Medconverge OCR - Custom Styles */
+
+:root {
+  --primary-color: #0d6efd;
+  --secondary-color: #6c757d;
+  --success-color: #198754;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --info-color: #0dcaf0;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+}
+
+/* Custom utility classes */
+.max-w-md {
+  max-width: 400px;
+}
+
+.sidebar {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #0056b3 100%);
+}
+
+.sidebar .nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  margin: 2px 0;
+  transition: all 0.3s ease;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.sidebar .nav-link i {
+  width: 20px;
+  margin-right: 10px;
+}
+
+/* Dashboard cards */
+.dashboard-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Status badges */
+.status-badge {
+  font-size: 0.75rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 20px;
+}
+
+/* File upload area */
+.upload-area {
+  border: 2px dashed #dee2e6;
+  border-radius: 12px;
+  padding: 3rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+}
+
+.upload-area:hover,
+.upload-area.dragover {
+  border-color: var(--primary-color);
+  background-color: rgba(13, 110, 253, 0.05);
+}
+
+.upload-area i {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+/* OCR result layout */
+.ocr-container {
+  min-height: 500px;
+}
+
+.ocr-file-preview {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+
+.ocr-text-result {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: white;
+  min-height: 400px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+/* Login pages */
+.login-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.login-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.login-card .card-header {
+  background: none;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Tables */
+.table-responsive {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table th {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+  font-weight: 600;
+}
+
+/* Forms */
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label {
+  color: var(--primary-color);
+}
+
+/* Buttons */
+.btn {
+  border-radius: 8px;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Modals */
+.modal-content {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  border-bottom: 1px solid #e9ecef;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Navigation */
+.navbar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    min-height: auto;
+  }
+  
+  .upload-area {
+    padding: 2rem 1rem;
+  }
+  
+  .ocr-container {
+    flex-direction: column;
+  }
+  
+  .ocr-file-preview,
+  .ocr-text-result {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Loading animation */
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+} 
