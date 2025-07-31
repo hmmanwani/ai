@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline Example 2 - Horizontal Cards</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #3b82f6;
+            --accent-color: #f59e0b;
+        }
+
+        .timeline-section {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .timeline-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow-x: auto;
+            padding: 2rem 0;
+        }
+
+        .timeline-track {
+            display: flex;
+            gap: 2rem;
+            padding: 2rem 0;
+            position: relative;
+        }
+
+        .timeline-track::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        .timeline-item {
+            position: relative;
+            min-width: 300px;
+            z-index: 2;
+        }
+
+        .timeline-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .timeline-card::before {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border: 15px solid transparent;
+            border-top-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .timeline-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            background: var(--accent-color);
+            border: 4px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px var(--primary-color);
+            z-index: 3;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover .timeline-dot {
+            transform: translate(-50%, -50%) scale(1.3);
+            box-shadow: 0 0 0 6px var(--primary-color);
+        }
+
+        .timeline-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent-color), #fbbf24);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-card:hover .timeline-icon {
+            transform: scale(1.1);
+        }
+
+        .timeline-year {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .timeline-card p {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .progress-indicator {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: var(--accent-color);
+            transition: width 0.3s ease;
+            z-index: 2;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-track {
+                flex-direction: column;
+                gap: 3rem;
+            }
+
+            .timeline-track::before {
+                display: none;
+            }
+
+            .timeline-item {
+                min-width: auto;
+            }
+
+            .timeline-card::before {
+                display: none;
+            }
+
+            .timeline-dot {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="timeline-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold">Our Journey</h2>
+                <p class="lead opacity-75">Three decades of professional excellence</p>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="progress-indicator" style="width: 12.5%;"></div>
+                <div class="timeline-track">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-icon">
+                                <i class="bi bi-building"></i>
+                            </div>
+                            <div class="timeline-year">1991</div>
+                            <h3>Foundation Established</h3>
+                            <p>Surana Maloo & Co. was established under the Chartered Accountants Act, 1949, marking the beginning of our professional journey.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-icon">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+                            <div class="timeline-year">1995</div>
+                            <h3>Expansion of Services</h3>
+                            <p>Extended our services to include comprehensive auditing and assurance services, building trust with our growing client base.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-icon">
+                                <i class="bi bi-calculator"></i>
+                            </div>
+                            <div class="timeline-year">2000</div>
+                            <h3>Tax Advisory Excellence</h3>
+                            <p>Developed specialized expertise in direct and indirect taxation, becoming a trusted partner for tax planning and compliance.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-icon">
+                                <i class="bi bi-graph-up"></i>
+                            </div>
+                            <div class="timeline-year">2005</div>
+                            <h3>Corporate Finance Division</h3>
+                            <p>Launched our corporate finance advisory services, helping businesses with project financing and strategic financial planning.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-icon">
+                                <i class="bi bi-globe"></i>
+                            </div>
+                            <div class="timeline-year">2010</div>
+                            <h3>International Services</h3>
+                            <p>Expanded into international tax consultancy and transfer pricing solutions, serving multinational corporations.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-icon">
+                                <i class="bi bi-laptop"></i>
+                            </div>
+                            <div class="timeline-year">2015</div>
+                            <h3>Digital Transformation</h3>
+                            <p>Embraced technology and digital solutions to enhance our service delivery and client experience.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-icon">
+                                <i class="bi bi-heart-pulse"></i>
+                            </div>
+                            <div class="timeline-year">2020</div>
+                            <h3>Pandemic Resilience</h3>
+                            <p>Successfully navigated the challenges of the global pandemic while maintaining service excellence and client support.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-icon">
+                                <i class="bi bi-rocket"></i>
+                            </div>
+                            <div class="timeline-year">2024</div>
+                            <h3>Future Forward</h3>
+                            <p>Continuing our legacy of excellence with innovative solutions and unwavering commitment to client success.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Progress indicator animation
+        window.addEventListener('scroll', function() {
+            const timelineSection = document.querySelector('.timeline-section');
+            const progressIndicator = document.querySelector('.progress-indicator');
+            
+            if (timelineSection) {
+                const rect = timelineSection.getBoundingClientRect();
+                const scrollPercent = Math.max(0, Math.min(100, (window.innerHeight - rect.top) / (rect.height - window.innerHeight) * 100));
+                progressIndicator.style.width = scrollPercent + '%';
+            }
+        });
+    </script>
+</body>
+</html> 

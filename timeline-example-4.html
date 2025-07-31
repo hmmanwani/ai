@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline Example 4 - Modern Cards</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #3b82f6;
+            --accent-color: #f59e0b;
+        }
+
+        .timeline-section {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .timeline-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .timeline-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .timeline-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .timeline-card:hover::before {
+            left: 100%;
+        }
+
+        .timeline-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-year {
+            background: linear-gradient(135deg, var(--accent-color), #fbbf24);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-card:hover .card-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .card-description {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .card-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .card-features li {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .card-features li i {
+            color: var(--accent-color);
+            margin-right: 0.75rem;
+            font-size: 0.8rem;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .timeline-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .timeline-card {
+                padding: 2rem;
+            }
+
+            .card-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="timeline-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold">Our Journey</h2>
+                <p class="lead opacity-75">Three decades of professional excellence</p>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-grid">
+                    <div class="timeline-card fade-in">
+                        <div class="card-badge">Foundation</div>
+                        <div class="card-header">
+                            <div class="card-year">1991</div>
+                            <div class="card-icon">
+                                <i class="bi bi-building"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Foundation Established</h3>
+                        <p class="card-description">Surana Maloo & Co. was established under the Chartered Accountants Act, 1949, marking the beginning of our professional journey in Ahmedabad, Gujarat.</p>
+                        <ul class="card-features">
+                            <li><i class="bi bi-check-circle"></i>Chartered Accountants Act compliance</li>
+                            <li><i class="bi bi-check-circle"></i>Professional registration</li>
+                            <li><i class="bi bi-check-circle"></i>Ahmedabad headquarters</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-card fade-in">
+                        <div class="card-badge">Growth</div>
+                        <div class="card-header">
+                            <div class="card-year">1995</div>
+                            <div class="card-icon">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Expansion of Services</h3>
+                        <p class="card-description">Extended our services to include comprehensive auditing and assurance services, building trust with our growing client base.</p>
+                        <ul class="card-features">
+                            <li><i class="bi bi-check-circle"></i>Audit & Assurance services</li>
+                            <li><i class="bi bi-check-circle"></i>Client base expansion</li>
+                            <li><i class="bi bi-check-circle"></i>Professional trust building</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-card fade-in">
+                        <div class="card-badge">Expertise</div>
+                        <div class="card-header">
+                            <div class="card-year">2000</div>
+                            <div class="card-icon">
+                                <i class="bi bi-calculator"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Tax Advisory Excellence</h3>
+                        <p class="card-description">Developed specialized expertise in direct and indirect taxation, becoming a trusted partner for tax planning and compliance.</p>
+                        <ul class="card-features">
+                            <li><i class="bi bi-check-circle"></i>Direct & Indirect taxation</li>
+                            <li><i class="bi bi-check-circle"></i>Tax planning expertise</li>
+                            <li><i class="bi bi-check-circle"></i>Compliance services</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-card fade-in">
+                        <div class="card-badge">Finance</div>
+                        <div class="card-header">
+                            <div class="card-year">2005</div>
+                            <div class="card-icon">
+                                <i class="bi bi-graph-up"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Corporate Finance Division</h3>
+                        <p class="card-description">Launched our corporate finance advisory services, helping businesses with project financing and strategic financial planning.</p>
+                        <ul class="card-features">
+                            <li><i class="bi bi-check-circle"></i>Project financing</li>
+                            <li><i class="bi bi-check-circle"></i>Strategic planning</li>
+                            <li><i class="bi bi-check-circle"></i>Financial advisory</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-card fade-in">
+                        <div class="card-badge">Global</div>
+                        <div class="card-header">
+                            <div class="card-year">2010</div>
+                            <div class="card-icon">
+                                <i class="bi bi-globe"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title">International Services</h3>
+                        <p class="card-description">Expanded into international tax consultancy and transfer pricing solutions, serving multinational corporations.</p>
+                        <ul class="card-features">
+                            <li><i class="bi bi-check-circle"></i>International tax consultancy</li>
+                            <li><i class="bi bi-check-circle"></i>Transfer pricing solutions</li>
+                            <li><i class="bi bi-check-circle"></i>Multinational clients</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-card fade-in">
+                        <div class="card-badge">Digital</div>
+                        <div class="card-header">
+                            <div class="card-year">2015</div>
+                            <div class="card-icon">
+                                <i class="bi bi-laptop"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Digital Transformation</h3>
+                        <p class="card-description">Embraced technology and digital solutions to enhance our service delivery and client experience.</p>
+                        <ul class="card-features">
+                            <li><i class="bi bi-check-circle"></i>Technology integration</li>
+                            <li><i class="bi bi-check-circle"></i>Digital solutions</li>
+                            <li><i class="bi bi-check-circle"></i>Enhanced client experience</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-card fade-in">
+                        <div class="card-badge">Resilience</div>
+                        <div class="card-header">
+                            <div class="card-year">2020</div>
+                            <div class="card-icon">
+                                <i class="bi bi-heart-pulse"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Pandemic Resilience</h3>
+                        <p class="card-description">Successfully navigated the challenges of the global pandemic while maintaining service excellence and client support.</p>
+                        <ul class="card-features">
+                            <li><i class="bi bi-check-circle"></i>Remote service delivery</li>
+                            <li><i class="bi bi-check-circle"></i>Client support maintained</li>
+                            <li><i class="bi bi-check-circle"></i>Adaptive solutions</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-card fade-in">
+                        <div class="card-badge">Future</div>
+                        <div class="card-header">
+                            <div class="card-year">2024</div>
+                            <div class="card-icon">
+                                <i class="bi bi-rocket"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Future Forward</h3>
+                        <p class="card-description">Continuing our legacy of excellence with innovative solutions and unwavering commitment to client success.</p>
+                        <ul class="card-features">
+                            <li><i class="bi bi-check-circle"></i>Innovation focus</li>
+                            <li><i class="bi bi-check-circle"></i>Client success commitment</li>
+                            <li><i class="bi bi-check-circle"></i>Sustainable growth</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html> 

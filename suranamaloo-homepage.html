@@ -319,142 +319,135 @@
         /* Timeline Section */
         .timeline-section {
             padding: 6rem 0;
-            background: var(--light-bg);
-            position: relative;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
         }
 
         .timeline-container {
             position: relative;
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem 0;
         }
 
-        .timeline-container::before {
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .timeline-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .timeline-card::before {
             content: '';
             position: absolute;
-            left: 50%;
             top: 0;
-            bottom: 0;
-            width: 4px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            transform: translateX(-50%);
-            border-radius: 2px;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
         }
 
-        .timeline-item {
-            position: relative;
-            margin-bottom: 3rem;
+        .timeline-card:hover::before {
+            left: 100%;
+        }
+
+        .timeline-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-header {
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
         }
 
-        .timeline-item:nth-child(odd) {
-            flex-direction: row;
-        }
-
-        .timeline-item:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        .timeline-marker {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-        }
-
-        .marker-dot {
-            width: 20px;
-            height: 20px;
-            background: var(--accent-color);
-            border: 4px solid white;
-            border-radius: 50%;
-            box-shadow: 0 0 0 4px var(--primary-color);
-            transition: all 0.3s ease;
-        }
-
-        .timeline-item:hover .marker-dot {
-            transform: scale(1.2);
-            box-shadow: 0 0 0 6px var(--primary-color);
-        }
-
-        .marker-line {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 40px;
-            background: var(--primary-color);
-        }
-
-        .timeline-content {
-            background: white;
-            border-radius: 15px;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            width: 45%;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .timeline-item:nth-child(odd) .timeline-content {
-            margin-left: 55%;
-        }
-
-        .timeline-item:nth-child(even) .timeline-content {
-            margin-right: 55%;
-        }
-
-        .timeline-content::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            width: 0;
-            height: 0;
-            border: 10px solid transparent;
-        }
-
-        .timeline-item:nth-child(odd) .timeline-content::before {
-            left: -20px;
-            border-right-color: white;
-            transform: translateY(-50%);
-        }
-
-        .timeline-item:nth-child(even) .timeline-content::before {
-            right: -20px;
-            border-left-color: white;
-            transform: translateY(-50%);
-        }
-
-        .timeline-content:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .timeline-year {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        .card-year {
+            background: linear-gradient(135deg, var(--accent-color), #fbbf24);
             color: white;
-            padding: 0.5rem 1rem;
+            padding: 0.75rem 1.5rem;
             border-radius: 25px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            display: inline-block;
-            margin-bottom: 1rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
-        .timeline-content h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
         }
 
-        .timeline-content p {
-            color: var(--text-light);
-            line-height: 1.6;
+        .timeline-card:hover .card-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .card-description {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .card-features {
+            list-style: none;
+            padding: 0;
             margin: 0;
+        }
+
+        .card-features li {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .card-features li i {
+            color: var(--accent-color);
+            margin-right: 0.75rem;
+            font-size: 0.8rem;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
         }
 
         /* Contact Section */
@@ -582,38 +575,19 @@
             }
 
             /* Timeline responsive */
-            .timeline-container::before {
-                left: 30px;
+            .timeline-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
 
-            .timeline-item {
-                flex-direction: row !important;
-                margin-left: 60px;
+            .timeline-card {
+                padding: 2rem;
             }
 
-            .timeline-marker {
-                left: 30px !important;
-                transform: translateX(-50%);
-            }
-
-            .timeline-content {
-                width: 100% !important;
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-            }
-
-            .timeline-item:nth-child(odd) .timeline-content,
-            .timeline-item:nth-child(even) .timeline-content {
-                margin-left: 0;
-                margin-right: 0;
-            }
-
-            .timeline-item:nth-child(odd) .timeline-content::before,
-            .timeline-item:nth-child(even) .timeline-content::before {
-                left: -20px !important;
-                right: auto !important;
-                border-right-color: white !important;
-                border-left-color: transparent !important;
+            .card-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
             }
         }
     </style>
@@ -816,99 +790,141 @@
             </div>
             
             <div class="timeline-container">
-                <div class="timeline-item fade-in">
-                    <div class="timeline-marker">
-                        <div class="marker-dot"></div>
-                        <div class="marker-line"></div>
+                <div class="timeline-grid">
+                    <div class="timeline-card fade-in">
+                        <div class="card-badge">Foundation</div>
+                        <div class="card-header">
+                            <div class="card-year">1991</div>
+                            <div class="card-icon">
+                                <i class="bi bi-building"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Foundation Established</h3>
+                        <p class="card-description">Surana Maloo & Co. was established under the Chartered Accountants Act, 1949, marking the beginning of our professional journey in Ahmedabad, Gujarat.</p>
+                        <ul class="card-features">
+                            <li><i class="bi bi-check-circle"></i>Chartered Accountants Act compliance</li>
+                            <li><i class="bi bi-check-circle"></i>Professional registration</li>
+                            <li><i class="bi bi-check-circle"></i>Ahmedabad headquarters</li>
+                        </ul>
                     </div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">1991</div>
-                        <h3>Foundation Established</h3>
-                        <p>Surana Maloo & Co. was established under the Chartered Accountants Act, 1949, marking the beginning of our professional journey in Ahmedabad, Gujarat.</p>
+                    
+                    <div class="timeline-card fade-in">
+                        <div class="card-badge">Growth</div>
+                        <div class="card-header">
+                            <div class="card-year">1995</div>
+                            <div class="card-icon">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Expansion of Services</h3>
+                        <p class="card-description">Extended our services to include comprehensive auditing and assurance services, building trust with our growing client base.</p>
+                        <ul class="card-features">
+                            <li><i class="bi bi-check-circle"></i>Audit & Assurance services</li>
+                            <li><i class="bi bi-check-circle"></i>Client base expansion</li>
+                            <li><i class="bi bi-check-circle"></i>Professional trust building</li>
+                        </ul>
                     </div>
-                </div>
-                
-                <div class="timeline-item fade-in">
-                    <div class="timeline-marker">
-                        <div class="marker-dot"></div>
-                        <div class="marker-line"></div>
+                    
+                    <div class="timeline-card fade-in">
+                        <div class="card-badge">Expertise</div>
+                        <div class="card-header">
+                            <div class="card-year">2000</div>
+                            <div class="card-icon">
+                                <i class="bi bi-calculator"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Tax Advisory Excellence</h3>
+                        <p class="card-description">Developed specialized expertise in direct and indirect taxation, becoming a trusted partner for tax planning and compliance.</p>
+                        <ul class="card-features">
+                            <li><i class="bi bi-check-circle"></i>Direct & Indirect taxation</li>
+                            <li><i class="bi bi-check-circle"></i>Tax planning expertise</li>
+                            <li><i class="bi bi-check-circle"></i>Compliance services</li>
+                        </ul>
                     </div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">1995</div>
-                        <h3>Expansion of Services</h3>
-                        <p>Extended our services to include comprehensive auditing and assurance services, building trust with our growing client base.</p>
+                    
+                    <div class="timeline-card fade-in">
+                        <div class="card-badge">Finance</div>
+                        <div class="card-header">
+                            <div class="card-year">2005</div>
+                            <div class="card-icon">
+                                <i class="bi bi-graph-up"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Corporate Finance Division</h3>
+                        <p class="card-description">Launched our corporate finance advisory services, helping businesses with project financing and strategic financial planning.</p>
+                        <ul class="card-features">
+                            <li><i class="bi bi-check-circle"></i>Project financing</li>
+                            <li><i class="bi bi-check-circle"></i>Strategic planning</li>
+                            <li><i class="bi bi-check-circle"></i>Financial advisory</li>
+                        </ul>
                     </div>
-                </div>
-                
-                <div class="timeline-item fade-in">
-                    <div class="timeline-marker">
-                        <div class="marker-dot"></div>
-                        <div class="marker-line"></div>
+                    
+                    <div class="timeline-card fade-in">
+                        <div class="card-badge">Global</div>
+                        <div class="card-header">
+                            <div class="card-year">2010</div>
+                            <div class="card-icon">
+                                <i class="bi bi-globe"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title">International Services</h3>
+                        <p class="card-description">Expanded into international tax consultancy and transfer pricing solutions, serving multinational corporations.</p>
+                        <ul class="card-features">
+                            <li><i class="bi bi-check-circle"></i>International tax consultancy</li>
+                            <li><i class="bi bi-check-circle"></i>Transfer pricing solutions</li>
+                            <li><i class="bi bi-check-circle"></i>Multinational clients</li>
+                        </ul>
                     </div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">2000</div>
-                        <h3>Tax Advisory Excellence</h3>
-                        <p>Developed specialized expertise in direct and indirect taxation, becoming a trusted partner for tax planning and compliance.</p>
+                    
+                    <div class="timeline-card fade-in">
+                        <div class="card-badge">Digital</div>
+                        <div class="card-header">
+                            <div class="card-year">2015</div>
+                            <div class="card-icon">
+                                <i class="bi bi-laptop"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Digital Transformation</h3>
+                        <p class="card-description">Embraced technology and digital solutions to enhance our service delivery and client experience.</p>
+                        <ul class="card-features">
+                            <li><i class="bi bi-check-circle"></i>Technology integration</li>
+                            <li><i class="bi bi-check-circle"></i>Digital solutions</li>
+                            <li><i class="bi bi-check-circle"></i>Enhanced client experience</li>
+                        </ul>
                     </div>
-                </div>
-                
-                <div class="timeline-item fade-in">
-                    <div class="timeline-marker">
-                        <div class="marker-dot"></div>
-                        <div class="marker-line"></div>
+                    
+                    <div class="timeline-card fade-in">
+                        <div class="card-badge">Resilience</div>
+                        <div class="card-header">
+                            <div class="card-year">2020</div>
+                            <div class="card-icon">
+                                <i class="bi bi-heart-pulse"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Pandemic Resilience</h3>
+                        <p class="card-description">Successfully navigated the challenges of the global pandemic while maintaining service excellence and client support.</p>
+                        <ul class="card-features">
+                            <li><i class="bi bi-check-circle"></i>Remote service delivery</li>
+                            <li><i class="bi bi-check-circle"></i>Client support maintained</li>
+                            <li><i class="bi bi-check-circle"></i>Adaptive solutions</li>
+                        </ul>
                     </div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">2005</div>
-                        <h3>Corporate Finance Division</h3>
-                        <p>Launched our corporate finance advisory services, helping businesses with project financing and strategic financial planning.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item fade-in">
-                    <div class="timeline-marker">
-                        <div class="marker-dot"></div>
-                        <div class="marker-line"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">2010</div>
-                        <h3>International Services</h3>
-                        <p>Expanded into international tax consultancy and transfer pricing solutions, serving multinational corporations.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item fade-in">
-                    <div class="timeline-marker">
-                        <div class="marker-dot"></div>
-                        <div class="marker-line"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">2015</div>
-                        <h3>Digital Transformation</h3>
-                        <p>Embraced technology and digital solutions to enhance our service delivery and client experience.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item fade-in">
-                    <div class="timeline-marker">
-                        <div class="marker-dot"></div>
-                        <div class="marker-line"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">2020</div>
-                        <h3>Pandemic Resilience</h3>
-                        <p>Successfully navigated the challenges of the global pandemic while maintaining service excellence and client support.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item fade-in">
-                    <div class="timeline-marker">
-                        <div class="marker-dot"></div>
-                        <div class="marker-line"></div>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-year">2024</div>
-                        <h3>Future Forward</h3>
-                        <p>Continuing our legacy of excellence with innovative solutions and unwavering commitment to client success.</p>
+                    
+                    <div class="timeline-card fade-in">
+                        <div class="card-badge">Future</div>
+                        <div class="card-header">
+                            <div class="card-year">2024</div>
+                            <div class="card-icon">
+                                <i class="bi bi-rocket"></i>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Future Forward</h3>
+                        <p class="card-description">Continuing our legacy of excellence with innovative solutions and unwavering commitment to client success.</p>
+                        <ul class="card-features">
+                            <li><i class="bi bi-check-circle"></i>Innovation focus</li>
+                            <li><i class="bi bi-check-circle"></i>Client success commitment</li>
+                            <li><i class="bi bi-check-circle"></i>Sustainable growth</li>
+                        </ul>
                     </div>
                 </div>
             </div>
