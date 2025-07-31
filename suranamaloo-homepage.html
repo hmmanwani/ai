@@ -316,6 +316,147 @@
             font-weight: 500;
         }
 
+        /* Timeline Section */
+        .timeline-section {
+            padding: 6rem 0;
+            background: var(--light-bg);
+            position: relative;
+        }
+
+        .timeline-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        .marker-dot {
+            width: 20px;
+            height: 20px;
+            background: var(--accent-color);
+            border: 4px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover .marker-dot {
+            transform: scale(1.2);
+            box-shadow: 0 0 0 6px var(--primary-color);
+        }
+
+        .marker-line {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 40px;
+            background: var(--primary-color);
+        }
+
+        .timeline-content {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: 55%;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-right: 55%;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            left: -20px;
+            border-right-color: white;
+            transform: translateY(-50%);
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            right: -20px;
+            border-left-color: white;
+            transform: translateY(-50%);
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .timeline-year {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content p {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin: 0;
+        }
+
         /* Contact Section */
         .contact-section {
             padding: 6rem 0;
@@ -438,6 +579,41 @@
             
             .stats-grid {
                 grid-template-columns: 1fr;
+            }
+
+            /* Timeline responsive */
+            .timeline-container::before {
+                left: 30px;
+            }
+
+            .timeline-item {
+                flex-direction: row !important;
+                margin-left: 60px;
+            }
+
+            .timeline-marker {
+                left: 30px !important;
+                transform: translateX(-50%);
+            }
+
+            .timeline-content {
+                width: 100% !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content::before,
+            .timeline-item:nth-child(even) .timeline-content::before {
+                left: -20px !important;
+                right: auto !important;
+                border-right-color: white !important;
+                border-left-color: transparent !important;
             }
         }
     </style>
@@ -625,6 +801,114 @@
                                 <p class="mb-0">Trusted by businesses and individuals for over three decades</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Our Journey</h2>
+                <p>Three decades of professional excellence and continuous growth</p>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">1991</div>
+                        <h3>Foundation Established</h3>
+                        <p>Surana Maloo & Co. was established under the Chartered Accountants Act, 1949, marking the beginning of our professional journey in Ahmedabad, Gujarat.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">1995</div>
+                        <h3>Expansion of Services</h3>
+                        <p>Extended our services to include comprehensive auditing and assurance services, building trust with our growing client base.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2000</div>
+                        <h3>Tax Advisory Excellence</h3>
+                        <p>Developed specialized expertise in direct and indirect taxation, becoming a trusted partner for tax planning and compliance.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2005</div>
+                        <h3>Corporate Finance Division</h3>
+                        <p>Launched our corporate finance advisory services, helping businesses with project financing and strategic financial planning.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2010</div>
+                        <h3>International Services</h3>
+                        <p>Expanded into international tax consultancy and transfer pricing solutions, serving multinational corporations.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2015</div>
+                        <h3>Digital Transformation</h3>
+                        <p>Embraced technology and digital solutions to enhance our service delivery and client experience.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2020</div>
+                        <h3>Pandemic Resilience</h3>
+                        <p>Successfully navigated the challenges of the global pandemic while maintaining service excellence and client support.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2024</div>
+                        <h3>Future Forward</h3>
+                        <p>Continuing our legacy of excellence with innovative solutions and unwavering commitment to client success.</p>
                     </div>
                 </div>
             </div>
