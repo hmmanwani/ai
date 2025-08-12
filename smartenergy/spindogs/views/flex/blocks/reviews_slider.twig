@@ -1,0 +1,120 @@
+{# Reviews Slider Block 
+
+Fields:
+ -- title: Text
+ -- reviews_to_show: Relationship (Reviews)
+ -- slides_to_show: Number (default: 3)
+ -- slides_to_show_tablet: Number (default: 2)
+ -- slides_to_show_mobile: Number (default: 1)
+ -- autoplay: Boolean (default: true)
+ -- autoplay_speed: Number (default: 5000)
+ -- margin_top: Select
+#}
+{% if block.reviews_to_show %}
+<div class="flexibleblocks-block" style='margin-top:{{ block.margin_top }};'>
+    <section class="reviews-slider slider __progress">
+        <div class="container position-relative">
+            <div class="row reviews-slider-header">
+                {% if block.title %}
+                <div class="col-12 col-xl-8">
+                    <h2 class="h1 reviews-slider-title __block-title">{{ block.title }}</h2>
+                </div>
+                {% endif %}
+                <div class="d-flex col-xxl-4 justify-content-xxl-end align-items-center reviews-slider-controls">
+                    <div class="reviews-slider-filters-wrap">
+                        <div class="slider-controls">
+                            <div class="slider-button-wrap d-flex justify-content-center">
+                                <button class="sliderbutton __dark __prev reviewsSliderPrevButton">
+                                    <span class="visually-hidden">Previous Review</span>
+                                </button>
+                                <button class="sliderbutton __dark __next reviewsSliderNextButton">
+                                    <span class="visually-hidden">Next Review</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <div class="reviews-slider-items" 
+                         data-slides-to-show="{{ block.slides_to_show|default(3) }}"
+                         data-slides-to-show-tablet="{{ block.slides_to_show_tablet|default(2) }}"
+                         data-slides-to-show-mobile="{{ block.slides_to_show_mobile|default(1) }}"
+                         data-autoplay="{{ block.autoplay|default(true) }}"
+                         data-autoplay-speed="{{ block.autoplay_speed|default(5000) }}">
+                        {% for review_post in block.reviews_to_show %}
+                            {% set review_fields = fn('get_fields', review_post.ID) %}
+                            <div class="review-slide">
+                                {% include 'components/review_item.twig' with {
+                                    review_fields: review_fields,
+                                    show_image: true,
+                                    card_class: 'review-slider-card'
+                                } %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const reviewsSlider = document.querySelector('.reviews-slider-items');
+    if (reviewsSlider) {
+        const slidesToShow = parseInt(reviewsSlider.dataset.slidesToShow) || 3;
+        const slidesToShowTablet = parseInt(reviewsSlider.dataset.slidesToShowTablet) || 2;
+        const slidesToShowMobile = parseInt(reviewsSlider.dataset.slidesToShowMobile) || 1;
+        const autoplay = reviewsSlider.dataset.autoplay === 'true';
+        const autoplaySpeed = parseInt(reviewsSlider.dataset.autoplaySpeed) || 5000;
+        
+        // Initialize Slick slider
+        $(reviewsSlider).slick({
+            dots: false,
+            infinite: true,
+            speed: 500,
+            slidesToShow: slidesToShow,
+            slidesToScroll: 1,
+            autoplay: autoplay,
+            autoplaySpeed: autoplaySpeed,
+            arrows: false, // We're using custom arrows
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: slidesToShowTablet,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: slidesToShowMobile,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+        
+        // Custom arrow controls
+        const prevButton = document.querySelector('.reviewsSliderPrevButton');
+        const nextButton = document.querySelector('.reviewsSliderNextButton');
+        
+        if (prevButton) {
+            prevButton.addEventListener('click', function() {
+                $(reviewsSlider).slick('slickPrev');
+            });
+        }
+        
+        if (nextButton) {
+            nextButton.addEventListener('click', function() {
+                $(reviewsSlider).slick('slickNext');
+            });
+        }
+    }
+});
+</script>
+{% endif %}

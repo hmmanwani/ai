@@ -1,0 +1,16 @@
+{% extends "layouts/master.twig" %}
+
+{% block content %}
+
+    {% include 'banners/home.twig' with {
+        'banner_image' : fields.banner_image,
+        'banner_title' : fields.banner_title,
+        'banner_text' : fields.banner_content,
+        'banner_button' : fields.banner_button,
+        'banner_button_two' : fields.banner_button_two,
+        'highlighted_text' : fields.highlighted_text
+    } %}
+
+    {% include 'flex/flex.twig' %}
+
+{% endblock %}

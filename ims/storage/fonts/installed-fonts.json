@@ -1,0 +1,9 @@
+{
+    "quicksand": {
+        "300": "C:\\xampp\\htdocs\\hmmbiz-ims-dev\\storage\\fonts\/quicksand_300_49c9f7484a80dc3a3e36b87bdbb81d60",
+        "normal": "C:\\xampp\\htdocs\\hmmbiz-ims-dev\\storage\\fonts\/quicksand_normal_f7551fcf1cc2d99723a0c966f9de93d1",
+        "500": "C:\\xampp\\htdocs\\hmmbiz-ims-dev\\storage\\fonts\/quicksand_500_0f4c2dc78e6f711691a09d926e8ac781",
+        "600": "C:\\xampp\\htdocs\\hmmbiz-ims-dev\\storage\\fonts\/quicksand_600_0686dfc51c170594dd247bc1069fd79d",
+        "bold": "quicksand_bold_abaa906692278e24faec3998cbc6e8d8"
+    }
+}

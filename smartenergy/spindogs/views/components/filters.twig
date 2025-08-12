@@ -1,0 +1,39 @@
+{% if categories %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-10 col-xl-8">
+                <div class="filter">
+                    <form action="{{ archive_url }}" method="get">
+
+                        <div class="filter-wrap d-lg-flex justify-content-between align-items-center">
+
+                            <h2 class="h4 filter-title mb-3 mb-lg-0">Filter result</h2>
+
+                            <div class="filter-controls d-flex">
+                                <div class="field_wrap __select">
+                                    <div class="label_wrap">
+                                        <label for="category1" class="visually-hidden">Category</label>
+                                    </div>
+                                    <div class="input_wrap">
+                                        <select id="category1" name="category_id" onchange="this.form.submit()">
+                                            <option value="0">Please Select</option>
+                                            {% for category in categories %}
+                                                <option {% if selected_category and selected_category == category.term_id %}selected{% endif %} value="{{ category.term_id }}">{{ category.name }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="submit_wrap">
+                                    <a href="{{ archive_url }}" class="button __gradient-light">
+                                        <span class="icon icon-delete"></span>Clear filter option
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div><!-- column -->
+        </div><!-- row -->
+    </div><!-- container -->
+{% endif %}

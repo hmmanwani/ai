@@ -1,0 +1,17 @@
+{% extends "layouts/master.twig" %}
+
+{% block content %}
+
+    {% include 'banners/flex.twig' with {
+        'banner_modifiers' : '__flex __post',
+        'has_date' : 1,
+        'has_author' : 1,
+        'banner_image' : fields.banner_image,
+        'banner_title' : fields.banner_title ? fields.banner_title : post.post_title,
+        'author' : fields.author,
+        'banner_date' : post.date
+    } %}
+
+    {% include 'flex/flex.twig' %}
+
+{% endblock %}

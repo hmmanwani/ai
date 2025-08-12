@@ -1,0 +1,13 @@
+<div class="socialshare">
+    <div class="socialshare-title socialShareToggle">
+        Share
+        <button type="button" name="button">Reveal social</button>
+    </div>
+    <div class="socialshare-socialset socialShareContent __active">
+      <div class="socialshare-socialset-content">
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ post.link|e('esc_url') }}" rel="noopener" target="_blank" class="socialicon __facebook">Facebook</a>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ post.link|e('esc_url') }}" rel="noopener" target="_blank" class="socialicon __linkedin">LinkedIn</a>
+        <a href="https://twitter.com/share?url={{ post.link|e('esc_url') }}" rel="noopener" target="_blank" class="socialicon __twitter">Twitter</a>
+      </div>
+    </div>
+</div>

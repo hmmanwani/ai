@@ -1,0 +1,23 @@
+{% if block.resources %}
+<section class="resources">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-10 col-lg-8 mx-auto">
+                {% if block.title %}
+                <h2 class="h1 resources-title">{{ block.title }}</h2>
+                {% endif %}
+                {% for resource in block.resources %}
+                <a href="{{ resource.resource.url }}" target="_blank" class="resources-item {{ resource.resource.filetype }} d-flex">
+                    <div class="resources-item-image"><span class="icon"></span></div>
+                    <div class="resources-item-content">
+                        <div class="resources-item-title h4">{{ resource.name }}</div>
+                        <div class="resources-item-info">{{ resource.resource.name }} </div>
+                    </div>
+                    <div class="resources-item-icon"><span class="icon"></span></div>
+                </a>
+                {% endfor %}
+            </div><!-- column -->
+        </div><!-- row -->
+    </div><!-- container -->
+</section>
+{% endif %}

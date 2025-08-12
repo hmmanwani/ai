@@ -1,0 +1,29 @@
+{# Pass a Timber\PostQuery as posts for timber pagination #}
+<nav class='paging' aria-label='Pagination'>
+    <ol class="paging-list">
+        <li>
+            {% set class = "paging-item __previous" ~ (posts.pagination.prev.link|length ? '' : ' __disabled') %}
+            {% if posts.pagination.prev.link|length > 0 %}
+            <a class="{{posts.pagination.prev.class }}{{ class|e('html_attr') }}" href="{{ posts.pagination.prev.link|e('esc_url') }}">Prev</a>
+            {% else %}
+            <span class="{{ class|e('html_attr') }}">Prev</span>
+            {% endif %}
+        </li>
+        {% for page in posts.pagination.pages %}
+            <li>
+                <a href="{{ page.link|e('esc_url') }}" class="paging-item {{ page.class|e('html_attr') }}"
+                aria-label="Go to Page {{ loop.index|e('html_attr') }}">
+                    {{ page.title|e('wp_kses_post') }}
+                </a>
+            </li>
+        {% endfor %}
+        {% set class = "paging-item __next" ~ (posts.pagination.next.link|length ? '' : ' __disabled') %}
+        <li>
+            {% if posts.pagination.next.link|length > 0 %}
+            <a class="{{ class|e('html_attr') }}" href="{{ posts.pagination.next.link|e('wp_kses_post') }}">Next</a>
+            {% else %}
+            <span class="{{ class|e('html_attr') }}" >next</span>
+            {% endif %}
+        </li>
+    </ol>
+</nav>

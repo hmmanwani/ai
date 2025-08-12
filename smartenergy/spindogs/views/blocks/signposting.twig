@@ -1,0 +1,58 @@
+{% if block.signposts %}
+<!-- @BE this looks way more complicated than it is, but I've adpated the work I'd already done. There will only need to be one signposting item component and each item will allow the user to upload their own svg file -->
+<section class="signposting signposting-slider">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-lg-9 col-xl-8 text-center mx-auto">
+                <div class="signposting-block-header">
+                    {% if block.title %}
+                    <h2 class="h1 signposting-block-title">{{  block.title }}</h2>
+                    {% endif %}
+                    {% if block.description %}
+                    <p class="signposting-block-text">
+                        {{ block.description }}
+                    </p>
+                    {% if block.button %}
+                    <a href="{{ block.button.link }}" class="signposting-cta button __gradient-dark">{{ block.button.title }}</a>
+                    {% endif %}
+                </div>
+            </div><!-- column -->
+        </div><!--row -->
+        <!-- @BE these svgs need to be inline because the colours change - we can only manipulate them if they are inline - soz -->
+        <div class="row slider-items">
+            {% for item in block.signposts %}
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+                <div class="signposting-item-wrap">
+                    <div class="signposting-item-background"></div>
+                    <a href="{{ item.link }}" class="signposting-item" aria-label="{{ item.title }}">
+                        {% if item.image %}
+                        <div class=" signposting-item-icon">
+                            <span><img src="{{ item.image.url }}" alt="{{ item.image.alt }}"></span>
+                        </div>
+                        {% endif %}
+                        <div class="signposting-item-content">
+                            {% if item.title %}
+                            <div class="h4 signposting-item-title">{{ item.title }}</div>
+                            {% endif %}
+                            {% if item.text %}
+                            <p class="signposting-item-text">{{ item.text }}</p>
+                            {% endif %}
+                        </div>
+                        {% if item.button_text %}
+                        <div class="button __inline __icon"><span class="icon"></span><span class="button-text">{{ item.button_text }}</span></div>
+                        {% endif %}
+                    </a>
+                </div>
+            </div><!-- column -->
+            {% endfor %}
+        </div><!-- row -->
+        {% if block.bottom_button %}
+        <div class="row signposting-cta">
+            <div class="col-12 d-flex justify-content-center">
+                <a href="{{ block.bottom_button.link }}" class="button __dark">{{ block.bottom_button.title }}</a>
+            </div>
+        </div><!-- row -->
+        {% endif %}
+    </div><!-- container -->
+</section>
+{% endif %}

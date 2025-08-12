@@ -1,0 +1,48 @@
+
+<div class="wrap">
+
+    <h1 class='wp-heading-inline'>{{ form.name }} - Response #{{ form.id }}</h1>
+
+    <hr class="wp-header-end">
+
+    <div class="tablenav top">
+        <form method="POST">
+            <input type="hidden" value="{{ form.id }}" name="response_id">
+            <button class='button action' type="submit" name="export" value="1">Export as CSV</button>
+        </form>
+    </div>
+
+
+    <table class="table widefat">
+
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Date Submitted</td>
+            <td>
+                {{ form.date_created|date('Y/m/d') ~ ' at ' ~ form.date_created|date('h:i a') }}
+            </td>
+        </tr>
+        {% set data = fn('json_decode', form.data, true) %}
+
+        {% for key, value in data %}
+           {% if key not in ['form_name', 'form_id', 'submit'] %}
+                    <tr>
+                        <td>{{ key|replace({ '_': ' '})|title|e('wp_kses_post') }}</td>
+                        {% if value is not iterable  %}
+                            <td>{{ value|e('wp_kses_post') }}</td>
+                        {% else %}
+                            <td>{{ value|json_encode|e('wp_kses_post') }}</td>
+                        {% endif %}
+                    </tr>
+                {% endif %}
+        {% endfor %}
+        </tbody>
+    </table> 
+
+</div>

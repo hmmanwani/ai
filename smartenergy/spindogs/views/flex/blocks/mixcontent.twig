@@ -1,0 +1,32 @@
+{# 
+Mix Content Block
+
+Fields:
+ -- content: WYSIWYG
+ -- image: Image (ID)
+ -- alt: True/False
+ -- margin_top: Select
+ 
+  #}
+
+<div class="flexibleblocks-block" style='margin-top:{{ block.margin_top }};'>
+    <section class="mixcontent">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="mixcontent {% if block.alt %}__alt{% endif %}">
+                        <div class="mixcontent-text">
+                            <div class="usercontent">
+                                {{ block.content|e('wp_kses_post') }}
+                            </div>
+                        </div>
+                        <div class="mixcontent-image">
+                            {% set image = get_image(block.image) %}
+                            <img srcset="{{ image.srcset }}" sizes="{{ image.img_sizes }}" src="{{ img.src }}" alt="{{ image.alt }}" loading="lazy" data-object-fit="cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

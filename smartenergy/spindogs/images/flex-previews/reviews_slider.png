@@ -1,0 +1,9 @@
+# This is a placeholder for the reviews_slider.png preview image
+# In a real implementation, this would be a PNG file showing:
+# - Multiple review cards in a horizontal slider layout
+# - Navigation arrows on the sides
+# - Title at the top
+# - Progress bar at the bottom
+# 
+# The image should be 100x100 pixels to match other preview images
+# and show a representative view of how the reviews slider appears

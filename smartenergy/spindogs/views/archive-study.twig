@@ -1,0 +1,42 @@
+{% extends "layouts/master.twig" %}
+
+{% block content %}
+
+
+    {% include 'banners/flex.twig' with {
+        'banner_modifiers' : '__flex __listing __no-image',
+        'banner_title' : fields.banner_title,
+        'banner_text' : fields.banner_content,
+        'show_svg' : 1,
+    } %}
+
+    <section class="listing">
+
+        {% include 'components/filters.twig' %}
+
+        <div class="listing-items __case-studies">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        {% for item in posts %}
+                            {% include 'components/case_studies_item.twig' %}
+                        {% endfor %}
+                    </div><!-- column -->
+                </div><!-- row -->
+
+                {% if posts|length < posts.found_posts %}
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center justify-content-lg-end">
+                        {% include 'components/pagination.twig' %}
+                    </div><!-- column -->
+                </div><!-- row -->
+                {% endif %}
+
+
+            </div><!-- container -->
+        </div>
+    </section>
+
+
+
+{% endblock %}

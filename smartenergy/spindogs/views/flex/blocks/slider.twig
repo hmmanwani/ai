@@ -1,0 +1,63 @@
+{# Slider Block 
+
+Fields:
+ -- items: Repeater
+   -- image: Image (ID)
+   -- title: Text
+   -- content: Text(area)
+   -- link: URL
+   -- link_text: Text
+ -- margin_top: Select
+#}
+<div class="flexibleblocks-block" style='margin-top:{{ block.margin_top }};'>
+    <section class="slider">
+
+        <div class="slider-button">
+            <span class="sliderbutton __prev sliderPrevButton">
+                <span class="sronly">Previous Slide</span>
+            </span>
+        </div>
+
+        <div class="slider-items">
+            {% for item in block.items %}
+            <div class="slideritem">
+                {% if block.image %}
+                    {% set image = get_image(block.image) %}
+                <div class="slideritem-image">
+                    <img src="{{ image.src }}" srcset="{{ image.srcset }}" sizes="{{ image.img_sizes }}" alt="{{ image.alt }}" loading="lazy" data-object-fit="cover">
+                </div>
+                {% endif %}
+                <div class="slideritem-wrap">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="slideritem-content">
+                                    <h2 class="slideritem-title">{{ item.title|e('wp_kses_post') }}</h2>
+                                    {% if item.content %}
+                                    <div class="slideritem-article">
+                                        <p>{{ item.content|e('wp_kses_post') }}</p>
+                                    </div>
+                                    {% endif %}
+                                    {% if item.link %}
+                                    <div class="slideritem-link">
+                                        <a href="{{ item.link|e('esc_url') }}" class="button">{{ item.link_text|e('wp_kses_post') }}</a>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="slider-button __next">
+            <span class="sliderbutton sliderNextButton">
+                <span class="sronly">Next Slide</span>
+            </span>
+        </div>
+
+    </section>
+    <!--slider-->
+</div>

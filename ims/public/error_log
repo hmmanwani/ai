@@ -1,0 +1,333 @@
+[26-Feb-2025 10:22:22 UTC] PHP Warning:  require(/home/imshmmbiz/public_html/app/helper.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/vendor/composer/autoload_real.php on line 78
+[26-Feb-2025 10:22:22 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/vendor/composer/../../app/helper.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/vendor/composer/autoload_real.php:78
+Stack trace:
+#0 /home/imshmmbiz/public_html/vendor/composer/autoload_real.php(61): composerRequiredd57bdc26a4a877d87d169132949d322()
+#1 /home/imshmmbiz/public_html/vendor/autoload.php(7): ComposerAutoloaderInitdd57bdc26a4a877d87d169132949d322::getLoader()
+#2 /home/imshmmbiz/public_html/public/index.php(34): require('/home/imshmmbiz...')
+#3 {main}
+  thrown in /home/imshmmbiz/public_html/vendor/composer/autoload_real.php on line 78
+[25-Apr-2025 04:55:51 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:55:51 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:55:54 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:55:54 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:03 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:03 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:09 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:09 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:11 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:11 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:18 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:18 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:21 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:21 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:30 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:30 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:30 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:30 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:33 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:33 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:42 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:42 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:44 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:44 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:46 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:46 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:46 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:46 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:47 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:47 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:47 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:47 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:48 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:48 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:48 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:48 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:49 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:49 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:55 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:56:55 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:03 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:03 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:06 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:06 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:07 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:07 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:08 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:08 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:09 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:09 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:09 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:09 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:10 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:10 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:11 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:11 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:12 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:12 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:13 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:13 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:15 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:15 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:18 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:18 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:18 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:18 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:23 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:23 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:23 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:23 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:24 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:24 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:24 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:24 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:25 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:25 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:25 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:25 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:25 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:25 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:27 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:27 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:27 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:27 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:28 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:28 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:28 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:28 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:29 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:29 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:30 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:30 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:30 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:30 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:34 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:34 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:34 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:34 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:35 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:35 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:37 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:37 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:37 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:37 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:40 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:40 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:41 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:41 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:41 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:41 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:42 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:42 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:42 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:42 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:42 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:42 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:43 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:43 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:43 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:43 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:43 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:43 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:44 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:44 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:49 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:49 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:55 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:57:55 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:58:28 UTC] PHP Warning:  require_once(/home/imshmmbiz/public_html/public/../bootstrap/app.php): Failed to open stream: No such file or directory in /home/imshmmbiz/public_html/public/index.php on line 47
+[25-Apr-2025 04:58:28 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/imshmmbiz/public_html/public/../bootstrap/app.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/imshmmbiz/public_html/public/index.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/imshmmbiz/public_html/public/index.php on line 47

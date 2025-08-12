@@ -1,0 +1,21 @@
+{# 
+Full Width Image
+
+Fields:
+ -- image: Image (ID)
+ -- setheight: True/False
+ -- margin_top: Select
+  #}
+
+
+{% set image = get_image(block.image) %}
+<div class="flexibleblocks-block" style='margin-top:{{ block.margin_top }};'>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="fullwidthimage {% if block.setheight %}__setheight{% endif %}">
+                <img src="{{ image.src }}" srcset="{{ image.srcset }}" sizes={{ image.image_sizes }} data-object-fit="cover" alt="{{ image.alt }}" loading="lazy">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- flexible block -->

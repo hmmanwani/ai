@@ -1,0 +1,66 @@
+mail list:
+
+--> User Side
+
+		1) Leave :  (done)
+				Add Leave ->	sent the leave request (Hr,Admin)
+                    URL = submit-leave - ManageLeaveController
+                    line = 146
+
+		2) WFH :   (done)
+				Add wfh ->	sent the wfh request (Hr,Admin)
+                    URL = submit-wfh - ManageLeaveController
+                    line = 66
+
+		3) Overtime :  (pending[not approved])
+				Add extra time ->	sent the extra time details (Hr,Admin)
+
+		4) Project :  (done)
+				--> Add New Projet (Team Leaders)
+                        URL = submit-project - ProjectController
+                        line = 66
+
+				--> Assign Other Team Member(Team Members)
+                        URL = update-assign-sub-emp - ProjectController
+                        line = 222
+
+		5) Documentation:  (done)
+				Request for the salary slip if not found (Hr,Admin)
+                        URL = submit-salary-slip-request - SalarySlipController
+                        line = 41
+
+		6)Resignation :   (done)
+				submit the resignation(Hr,Admin)
+                        URL = submit-resignation - ResignationController
+                        line = 39
+
+		7)Change Password :  (done)
+				Employee set the new password(Hr,Admin)
+                        URL = submit-change-password   - LoginController
+                        line = 131
+
+        8)Forgot password :
+                User enter the email send the rendom token in mail.
+
+--> Admin/Hr Side
+
+		1) Leave:  (done)
+				Approve/Reject Leave(Employee)
+                  URL = approve-leave   - LeaveController
+                  line = 137
+
+		2) WFH:  (done)
+				Approve/Reject wfh(Employee)
+                  URL = approve-wfh   - LeaveController
+                  line = 355
+
+		3) Overtime :
+				Approve Extra Time(Employee)
+
+		4) Resignation :
+				Approve the resignation (Employee)
+
+		5) Employee :
+				Edit the login and logout time (Employee)
+				Edit the Employee Details like password and email (Employee)
+

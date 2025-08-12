@@ -1,0 +1,55 @@
+<!--banner-->
+<section class="banner __home">
+    <div class="banner-wrap">
+        <div class="container">
+            <div class="row banner-wrap-row">
+                <div class="col-lg-8 col-xl-6">
+                    <div class="banner-content">
+                        {% if banner_title %}
+                        <h1 class="banner-title">{{ banner_title }}
+                            <span class="banner-span-wrap">
+                                {% if highlighted_text %}
+                                    <img class="span-start" src="{{ site.theme.link }}/views/components/backgrounds/{{ span_start }}" alt="">
+                                    <span class="span-text">{{ highlighted_text }}</span>
+                                    <img class="span-end" src="{{ site.theme.link }}/views/components/backgrounds/{{ span_end }}" alt="">
+                                {% endif %}
+                            </span>
+                        </h1>
+                        {% endif %}
+                        {% if banner_text %}
+                        <p class=" banner-text">
+                            {{ banner_text }}
+                        </p>
+                        {% endif %}
+
+                        {% include 'components/themed-buttons.twig' with {
+                            'use_dark_buttons' : 'dark',
+                            'button_one' : banner_button,
+                            'button_two' : banner_button_two
+                        } %}
+
+                        <button class="banner-pause playPause"><span class="icon __pause"></span><span class="visually-hidden">Pause animation</span></button>
+                    </div>
+                </div><!-- column -->
+                <div class="col-lg-4 col-xl-6 d-flex align-items-end">
+                    {% if banner_image %}
+                    <picture class="banner-image">
+                        <source srcset="{{ banner_image.url }}" media="(min-width:992px)">
+                        <source srcset="{{ banner_image.url }}" media="(min-width:768px)">
+                        <source srcset="{{ banner_image.url }}" media="(min-width:576px)">
+                        <source srcset="{{ banner_image.url }}" type="image/jpeg">
+                        <img src="{{ banner_image.url }}" alt="{{ banner_image.alt }}" data-object-fit="cover" class="banner-clip-path">
+                    </picture>
+                    {% endif %}
+                </div><!-- column -->
+
+            </div><!-- row -->
+        </div><!--container-->
+    </div><!--wrap-->
+    <div class="banner-background-wrap">
+        <div class="banner-background">
+            {% include 'components/backgrounds/' ~ lines_background %}
+        </div>
+    </div>
+</section>
+<!--banner-->

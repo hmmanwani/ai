@@ -1,0 +1,72 @@
+<div class="wrap">
+
+    <p>
+        <h1>Form Submissions</h1>
+    </p>
+
+    <div class="tablenav top">
+        <form method="GET" action="{{ action_url|e('esc_url') }}">
+            <input type='hidden' name='page' value='formbuilder'/>
+            <input type='hidden' name='post_type' value='form'/>
+            <div class="alignleft actions">
+                <select name="form_type" id="form_type">
+                    <option>All</option>
+                    {% for id, type in form_types %}
+                        <option {% if request.get.form_type == id %} selected {% endif %} value="{{ id|e('html_attr') }}">{{ type|e('wp_kses_post') }}</option>
+                    {% endfor %}
+                </select>
+                <input type='submit' name='filter' id='filter' class='button' value='Filter'>
+                <input type="submit" name="export" id="form_type-submit" class="button" value="Export">
+            </div>
+
+            <div class="tablenav-pages no-pages">
+                <span class="displaying-num">{{ responses|length }}
+                    items</span>
+            </div>
+        </form>
+        <br>
+        <br>
+    </div>
+
+    <table class="wp-list-table widefat fixed striped table-view-list posts">
+
+        <thead>
+            <tr>
+                <th class='manage-column column-title'>Form Name</th>
+                <th class='manage-column column-date'>Date created</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for response in responses %}
+                <tr>
+                    <td class="title column-title has-row-actions column-primary page-title" data-colname="Title">
+                        <div class="locked-info">
+                            <span class="locked-avatar"></span>
+                            <span class="locked-text"></span>
+                        </div>
+                        <strong>
+                            <a class="row-title" href="admin.php?page=formbuilder&form_response_id={{ response.id }}" aria-label="{{ response.name|e('html_attr') }}” (View)">{{ response.name|e('wp_kses_post') }}</a>
+                        </strong>
+                        <div class="row-actions">
+                            <span class="edit">
+                                <a href="admin.php?page=formbuilder&form_response_id={{ response.id }}" rel="bookmark" aria-label="View {{ response.name|e('html_attr') }}">View</a>
+                            </span>
+                        </div>
+                        <button type="button" class="toggle-row">
+                            <span class="screen-reader-text">Show more details</span>
+                        </button>
+                    </td>
+                    <td class='date column-date'>
+                        Submitted<br>
+                        {{ response.created_at|date('Y/m/d') ~ ' at ' ~ response.created_at|date('h:i a') }}
+                    </td>
+                </tr>
+            </tbody>
+        </tbody>
+    </tr>
+{% else %}
+    <tr>
+        <td colspan="4">No form submissions found</td>
+    </tr>
+{% endfor %}</tbody></table>

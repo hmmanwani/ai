@@ -1,0 +1,26 @@
+<a href="{{ item.link|e('esc_url') }}" class="post-item" aria-label="{{ item.title }}">
+    <div class="post-item-wrap">
+        {% if item.thumbnail.src %}
+        <div class=" post-image">
+            <picture class="w-100 h-100">
+                <source srcset="{{ item.thumbnail.src }}" media="(min-width:1200px)">
+                <source srcset="{{ item.thumbnail.src }}">
+                <img src="{{ item.thumbnail.src }}" alt="{{ item.thumbnail.alt }}" data-object-fit="cover" loading="lazy">
+            </picture>
+        </div>
+        {% else %}
+        <div class="post-image-placeholder"></div>
+        {% endif %}
+        <div class="post-content-wrap">
+            <div class="post-content">
+                <h2 class="h4 post-title __block-title">{{ item.title }}</h2>
+                {% if item.post_excerpt %}
+                <div class="post-article">
+                    <p>{{ item.post_excerpt }}</p>
+                </div>
+                {% endif %}
+                <div class="button __inline __icon"><span class="icon"></span><span class="button-text">Continue reading</span></div>
+            </div>
+        </div>
+    </div>
+</a><!--Post item-->

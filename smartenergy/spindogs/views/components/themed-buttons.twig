@@ -1,0 +1,16 @@
+{% if use_dark_buttons == 'dark' %}
+    {% set button_one_class = '__light' %}
+    {% set button_two_class = '__gradient-light' %}
+{% else %}
+    {% set button_one_class = '__dark' %}
+    {% set button_two_class = '__gradient-dark' %}
+{% endif %}
+
+<div class="button-wrap __light">
+    {% if button_one.url and button_one.title %}
+        <a href="{{ button_one.url }}" class="button {{ button_one_class }}">{{ button_one.title }}</a>
+    {% endif %}
+    {% if button_two.url and button_two.title %}
+        <a href="{{ button_two.url }}" class="button {{ button_two_class }}">{{ button_two.title }}</a>
+    {% endif %}
+</div>

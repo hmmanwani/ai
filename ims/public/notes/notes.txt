@@ -1,0 +1,43 @@
+Attendance module :
+                    Add Login time Request (if user forget the login the morning.)
+                    Extra Working Houers.
+                    calender font size decres.
+
+Admin/leave/wfh:
+                    Show the all status(reject,approve,pending) are leave and wfh page.
+
+
+
+
+
+
+
+
+                    https://www.ajio.com/dnmx-men-printed-boxy-fit-hooded-t-shirt/p/443030290_offwhite
+gsap scrolle example -> https://codepen.io/GreenSock/pen/oNdNLxL
+                        https://codepen.io/jh3y/pen/yLxyOJp
+                        https://codepen.io/GreenSock/pen/qBdzqmR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ALTER TABLE `address` ADD `status` ENUM('Pending','Approve','Reject') NOT NULL DEFAULT 'Pending' AFTER `postal_code`;
+ALTER TABLE `emergency_contact` ADD `status` ENUM('Pending','Approve','Reject') NOT NULL DEFAULT 'Pending' AFTER `phone`;
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+<section class="videoblock">
+    <div class="container">
+        {% if block.title %}
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="h1 videoblock-title">{{ block.title }}</h2>
+            </div><!-- column -->
+        </div><!-- row -->
+        {% endif %}
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                {% if block.video_url and block.video_image %}
+                <a href="{{ block.video_url }}" data-mfp-src="{{ block.video_url }}" class="video">
+                    <div class="video-image">
+                        <picture>
+                            <source srcset="{{ block.video_image.url }}" media="(min-width:768px)">
+                            <source srcset="{{ block.video_image.url }}">
+                            <img src="{{ block.video_image.url }}" alt="{{ block.video_image.alt }}" data-object-fit="cover" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="videoplay">
+                        <div class="videoplay-icon"></div>
+                        <span class="videoplay-text">Play video</span>
+                    </div>
+                </a>
+                {% endif %}
+            </div><!-- column -->
+            {% if block.caption_title %}
+            <div class="col-lg-6 col-xl-5 offset-lg-1">
+                <div class="videoblock-caption">
+                    <h2 class="h4">{{ block.caption_title }}</h2>
+                    {% if block.caption_text %}
+                    <p>{{ block.caption_text }}</p>
+                    {% endif %}
+                </div>
+            </div><!-- column -->
+            {% endif %}
+        </div><!-- row -->
+    </div><!-- container -->
+</section>

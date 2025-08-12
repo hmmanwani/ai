@@ -1,0 +1,59 @@
+<!--offcanvas-->
+<div class="navwrap">
+    <nav aria-label="Primary" class="nav">
+        <ul>
+            {% if options.header_button %}
+            <li class="d-lg-none">
+                <a href="{{ options.header_button.url }}" class="header-cta button __gradient-light">{{ options.header_button.title }}</a>
+            </li>
+            {% endif %}
+            {% for item in main_menu.items %}
+                {% if item.children %}
+                    <li class="{{ item.classes|join(' ') }}">
+                        <a href="{{ item.link }}">{{ item.title }}</a>
+                        <button type="button" aria-haspopup="true" aria-expanded="false">Expand {{ item.title }}</button>
+                        <ul>
+                            {% for child in item.children %}
+                                {% if child.children %}
+                                    <li class="menu-item menu-item-has-children">
+                                        <a href="{{ child.link }}">{{ child.title }}</a>
+                                        <button type="button" aria-haspopup="true" aria-expanded="false">Expand {{ child.title }}</button>
+                                        <ul>
+                                            {% for grandchild in child.children %}
+                                                {% if grandchild.children %}
+                                                    <li class="menu-item menu-item-has-children">
+                                                        <a href="{{ grandchild.link }}">{{ grandchild.title }}</a>
+                                                        <button type="button" aria-haspopup="true" aria-expanded="false">Expand {{ grandchild.title }}</button>
+                                                        <ul>
+                                                            {% for great_grandchild in grandchild.children %}
+                                                            <li class="menu-item"><a href="{{ great_grandchild.link }}">{{ great_grandchild.title }}</a></li>
+                                                            {% endfor %}
+                                                        </ul>
+                                                    </li>
+                                                {% else %}
+                                                <li class="{{ grandchild.classes|join(' ') }}"><a href="{{ grandchild.link }}">{{ grandchild.title }}</a></li>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </ul>
+                                    </li>
+                                {% else %}
+                                    <li class="menu-item">
+                                        <a href="{{ child.link }}">{{ child.title }}</a>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% else %}
+                    <li class="{{ item.classes|join(' ') }} __link-only">
+                        <a href="{{ item.link }}">
+                            <span class="link-text">{{ item.title }}</span>
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+    <!--nav-->
+</div>
+<!--offcanvas-->

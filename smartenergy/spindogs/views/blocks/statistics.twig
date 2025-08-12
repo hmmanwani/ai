@@ -1,0 +1,46 @@
+{% if block.statistics %}
+<section class="statistics">
+    <div class="container">
+        {% if block.title %}
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="h1 statistics-block-title">{{ block.title }}</h2>
+            </div><!-- column -->
+        </div><!-- row -->
+        {% endif %}
+        <div class="row">
+            <div class="col-12 statistics-items">
+                {% for stat in block.statistics %}
+                <div class="statistics-item">
+                    {% if stat.tooltip_text %}
+                    <button class="statistics-item-button statisticsButton" aria-label="more information" aria-haspopup="true" aria-expanded="false"><span class="icon icon-info"></span></button>
+                    <div class="statistics-item-modal statisticsModal">
+                        <div class="statistics-item-modal-content">
+                            <p>{{ stat.tooltip_text }}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+                    <div class="h2 statistics-item-value">
+                        <div class="statistics-item-value-wrap">
+                            {% if multisite_modifiers and multisite_modifiers == '__theme-business' %}
+                            <img class="span-start" src="{{ site.theme.link }}/views/components/backgrounds/span-start-business.svg" alt="">
+                            <span class="span-text">{{ stat.statistic }}</span>
+                            <img class="span-end" src="{{ site.theme.link }}/views/components/backgrounds/span-end-business.svg" alt="">
+                            {% else %}
+                            <img class="span-start" src="{{ site.theme.link }}/views/components/backgrounds/span-start.svg" alt="">
+                            <span class="span-text">{{ stat.statistic }}</span>
+                            <img class="span-end" src="{{ site.theme.link }}/views/components/backgrounds/span-end.svg" alt="">
+                            {% endif %}
+                        </div>
+                        Annual savings
+                    </div>
+                    {% if stat.caption %}
+                    <p class="statistics-item-text">{{ stat.caption }}</p>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div><!-- column -->
+        </div><!-- row -->
+    </div><!-- container -->
+</section>
+{% endif %}

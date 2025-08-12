@@ -1,0 +1,15 @@
+{% extends "layouts/master.twig" %}
+
+{% block content %}
+
+
+    {% include 'banners/flex.twig' with {
+        'banner_modifiers' : '__flex __faq',
+        'has_banner_image' : '__no-image',
+        'banner_title' : fields.banner_title,
+        'banner_text' : fields.banner_content,
+    } %}
+
+    {% include 'components/tabbed_data.twig' %}
+
+{% endblock %}

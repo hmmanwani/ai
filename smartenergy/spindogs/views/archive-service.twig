@@ -1,0 +1,83 @@
+{% extends "layouts/master.twig" %}
+
+{% block content %}
+
+
+    {% include 'banners/flex.twig' with {
+        'banner_modifiers' : '__flex __listing __no-image',
+        'banner_title' : fields.banner_title,
+        'banner_text' : fields.banner_content,
+        'show_svg' : 1,
+    } %}
+
+    {% include 'components/filters.twig' %}
+
+    {% if fields.services_content %}
+    <!-- Text -->
+    <div class="flexibleblocks-block">
+        <section class="textblock __left-align">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-xl-8 __left-align">
+                        <div class="usercontent">
+                            {{ fields.services_content }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Text END-->
+    {% endif %}
+
+    {% if posts %}
+        <!-- @BE this looks way more complicated than it is, but I've adpated the work I'd already done. There will only need to be one signposting item component and each item will allow the user to upload their own svg file -->
+        <section class="signposting signposting-slider">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-lg-9 col-xl-8 text-center mx-auto">
+                        <div class="signposting-block-header">
+                            {% if fields.services_title %}
+                                <h2 class="h1 signposting-block-title">{{ fields.services_title }}</h2>
+                            {% endif %}
+                            {% if fields.services_description %}
+                                <p class="signposting-block-text">
+                                    {{ fields.services_description }}
+                                </p>
+                            {% endif %}
+                        </div>
+                    </div><!-- column -->
+                </div><!--row -->
+
+                <div class="row slider-items">
+                    {% for item in posts %}
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="signposting-item-wrap">
+                                <div class="signposting-item-background"></div>
+                                <a href="{{ item.link }}" class="signposting-item" aria-label="{{ item.post_title }}">
+                                    {% if item.thumbnail.src %}
+                                        <div class=" signposting-item-icon">
+                                            <span><img src="{{ item.thumbnail.src }}" alt="{{ item.thumbnail.alt }}"></span>
+                                        </div>
+                                    {% endif %}
+                                    <div class="signposting-item-content">
+                                        {% if item.post_title %}
+                                            <div class="h4 signposting-item-title">{{ item.post_title }}</div>
+                                        {% endif %}
+                                        {% if item.post_excerpt %}
+                                            <p class="signposting-item-text">{{ item.post_excerpt }}</p>
+                                        {% endif %}
+                                    </div>
+                                    <div class="button __inline __icon"><span class="icon"></span><span class="button-text">Find Out More</span></div>
+                                </a>
+                            </div>
+                        </div><!-- column -->
+                    {% endfor %}
+                </div><!-- row -->
+            </div><!-- container -->
+        </section>
+    {% endif %}
+
+    {% include 'flex/flex.twig' %}
+
+{% endblock %}
