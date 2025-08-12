@@ -183,7 +183,7 @@ class DocumentController extends Controller
         //         'ifsc' => $salarySlip->ifsc,
         //         'uploadby' => $uploadby->uploadby,
         //     ];
-        //     $to = "utsav@hmmbiz.com";
+        //     $to = "utsav@ai.devtribe.in";
         //     $msg = "Upload Salary-Slip - " . $salaryslipdetails['date'];
         //     $this->emailService->sendMail($to, $msg, 'ims/mail/admin-mail/uploadsalaryslipmail', ['data' => $salaryslipdetails]);
     }

@@ -213,7 +213,7 @@
                 <table width="800" style="margin-top: 20px;">
                     <tr>
                         <td>
-                            Ready to take your career to new heights? Send your CV to hr@hmmbiz.com and let's make great
+                            Ready to take your career to new heights? Send your CV to hr@ai.devtribe.in and let's make great
                             things happen together!
                         </td>
                     </tr>
