@@ -14,11 +14,7 @@
     RewriteCond %{REQUEST_URI} (.+)/$
     RewriteRule ^ %1 [L,R=301]
 
-    # Handle Subdirectory (/ims)
-    RewriteCond %{REQUEST_URI} !^/ims/
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ /ims/$1 [L]
+    # Handle Subdirectory (/ims) - REMOVED - This was causing asset loading issues
 
     # Send Requests To Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
