@@ -1,9 +1,0 @@
-{% if fields.flex_blocks %}
-    <div class="flexibleblocks">
-    {% for block in fields.flex_blocks %}
-        <div class="flexibleblocks-block {% if block.margin %}{{ block.margin }}{% endif %}">
-            {% include 'flex/blocks/' ~ block.acf_fc_layout ~ '.twig' %}
-        </div>
-    {% endfor %}
-    </div>
-{% endif %}
