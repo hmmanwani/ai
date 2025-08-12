@@ -33,13 +33,13 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/md-date-time-picker@2.3.0/dist/css/mdDateTimePicker.min.css">
 {{-- vendoes and template css  --}}
-<link rel="stylesheet" href="{{ asset('ims/public/vendors/base/vendor.bundle.base.css') }}">
-<link rel="stylesheet" href="{{ asset('ims/public/vendors/mdi/css/materialdesignicons.min.css') }}">
-<link rel="stylesheet" href="{{ asset('ims/public/assets/css/panel.css?v1') }}">
+<link rel="stylesheet" href="{{ asset('vendors/base/vendor.bundle.base.css') }}">
+<link rel="stylesheet" href="{{ asset('vendors/mdi/css/materialdesignicons.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/panel.css?v1') }}">
 {{-- jnoty css  --}}
-<link rel="stylesheet" href="{{ asset('ims/public/assets/css/jnoty.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/jnoty.min.css') }}">
 {{-- custom css --}}
-<link rel="stylesheet" href="{{ asset('ims/public/assets/css/mystyle.css?v8') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/mystyle.css?v8') }}">
 {{-- popper js  --}}
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 {{-- title  --}}
