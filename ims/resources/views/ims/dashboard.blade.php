@@ -79,7 +79,7 @@
                                     </div>
                                     <hr>
                                     <div class="card-profile d-flex align-items-center mb-2">
-                                        <img src="{{ URL('assets/images/logo/logo.png') }}" class="time-work-img"
+                                        <img src="{{ asset('assets/images/logo/logo.png') }}" class="time-work-img"
                                             alt="time-at-work">
                                         <div class="card-profile-record ms-3">
                                             <p class="attendance-card-state ">Clock-In :
@@ -266,7 +266,7 @@
                                                         data-bs-placement="top" data-bs-custom-class="custom-tooltip"
                                                         data-bs-html="true"
                                                         data-bs-title=" <strong>Permanent</strong> Work From Home">
-                                                        <img src="{{ URL('assets/images/logo/logo.png') }}"
+                                                        <img src="{{ asset('assets/images/logo/logo.png') }}"
                                                             class="img-30 mb-1" alt="work-from-home">
                                                         <p class="f-16">{{ Str::ucfirst($ptwfh->fname) }}
                                                             {{ Str::ucfirst($ptwfh->lname) }}</p>
@@ -277,7 +277,7 @@
                                                         data-bs-placement="top" data-bs-custom-class="custom-tooltip"
                                                         data-bs-html="true"
                                                         data-bs-title="{{ Str::ucfirst($todaywfh->apply_for) }}">
-                                                        <img src="{{ URL('assets/images/logo/logo.png') }}"
+                                                        <img src="{{ asset('assets/images/logo/logo.png') }}"
                                                             class="img-30 mb-1" alt="work-from-home">
                                                         <p class="f-16">{{ Str::ucfirst($todaywfh->fname) }}
                                                             {{ Str::ucfirst($todaywfh->lname) }}</p>
@@ -334,7 +334,7 @@
                                                         data-bs-placement="top" data-bs-custom-class="custom-tooltip"
                                                         data-bs-html="true"
                                                         data-bs-title="{{ Str::ucfirst($todayleave->leave_for) }}">
-                                                        <img src="{{ URL('assets/images/logo/logo.png') }}"
+                                                        <img src="{{ asset('assets/images/logo/logo.png') }}"
                                                             class="img-30 mb-1" alt="leave-on-today">
                                                         <p class="f-16">{{ Str::ucfirst($todayleave->fname) }}
                                                             {{ Str::ucfirst($todayleave->lname) }}</p>
@@ -429,7 +429,7 @@
                                                                     <!-- Display today's birthdays -->
                                                                     @forelse ($employees as $employee)
                                                                         <div class="col-md-3 text-center">
-                                                                            <img src="{{ URL('assets/images/logo/logo.png') }}"
+                                                                            <img src="{{ asset('assets/images/logo/logo.png') }}"
                                                                                 class="img-30 mb-1"
                                                                                 alt="today-birthday">
                                                                             <p class="f-16">
@@ -462,7 +462,7 @@
                                                                     <!-- Display work anniversaries -->
                                                                     @forelse ($workanniversaryes as $workanniversary)
                                                                         <div class="col-md-3 text-center">
-                                                                            <img src="{{ URL('assets/images/logo/logo.png') }}"
+                                                                            <img src="{{ asset('assets/images/logo/logo.png') }}"
                                                                                 class="img-30 mb-1"
                                                                                 alt="today-workanniversary">
                                                                             <p class="f-16">
@@ -519,7 +519,7 @@
                                                                                 data-toggle="tooltip"
                                                                                 data-placement="bottom"
                                                                                 title="{{ $upcomingBirthdays->dob }}">
-                                                                                <img src="{{ URL('assets/images/logo/logo.png') }}"
+                                                                                <img src="{{ asset('assets/images/logo/logo.png') }}"
                                                                                     class="img-30 mb-1 blur-image"
                                                                                     alt="upcoming-birthday">
                                                                                 <p class="f-16 blur-image">
@@ -549,7 +549,7 @@
                                                                                 data-toggle="tooltip"
                                                                                 data-placement="bottom"
                                                                                 title="{{ $upcomingworkanniversary->formatted_join_date }}">
-                                                                                <img src="{{ URL('assets/images/logo/logo.png') }}"
+                                                                                <img src="{{ asset('assets/images/logo/logo.png') }}"
                                                                                     class="img-30 mb-1"
                                                                                     alt="upcoming-workanniversary">
                                                                                 <p class="f-16">

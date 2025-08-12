@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Redirect all requests to the public directory
+RewriteCond %{REQUEST_URI} !^/ims/public/
+RewriteRule ^(.*)$ /ims/public/$1 [L]
+
+# If the request is for the root domain, redirect to /ims
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^(.*)$ /ims/ [R=301,L]

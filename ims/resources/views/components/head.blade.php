@@ -5,7 +5,7 @@
 
 
 {{-- icon  --}}
-<link rel="shortcut icon" href="{{ URL('assets/images/logo/logo.png') }}" />
+<link rel="shortcut icon" href="{{ asset('assets/images/logo/logo.png') }}" />
 {{-- google font  --}}
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 {{-- chosen css  --}}
@@ -33,13 +33,13 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/md-date-time-picker@2.3.0/dist/css/mdDateTimePicker.min.css">
 {{-- vendoes and template css  --}}
-<link rel="stylesheet" href="{{ URL('vendors/base/vendor.bundle.base.css') }}">
-<link rel="stylesheet" href="{{ URL('vendors/mdi/css/materialdesignicons.min.css') }}">
-<link rel="stylesheet" href="{{ URL('assets/css/panel.css?v1') }}">
+<link rel="stylesheet" href="{{ asset('vendors/base/vendor.bundle.base.css') }}">
+<link rel="stylesheet" href="{{ asset('vendors/mdi/css/materialdesignicons.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/panel.css?v1') }}">
 {{-- jnoty css  --}}
-<link rel="stylesheet" href="{{ URL('assets/css/jnoty.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/jnoty.min.css') }}">
 {{-- custom css --}}
-<link rel="stylesheet" href="{{ URL('assets/css/mystyle.css?v8') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/mystyle.css?v8') }}">
 {{-- popper js  --}}
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 {{-- title  --}}

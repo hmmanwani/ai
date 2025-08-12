@@ -29,13 +29,13 @@
 <!-- Ensure correct order and URLs for intl-tel-input -->
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@16.0.3/build/js/intlTelInput.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@16.0.3/build/js/utils.js"></script>
-<script src="{{ URl('vendors/justgage/raphael-2.1.4.min.js') }}"></script>
-<script src="{{ URl('vendors/justgage/justgage.js') }}"></script>
-<script src="{{ URl('assets/js/jquery.cookie.js') }}" type="text/javascript"></script>
+<script src="{{ asset('vendors/justgage/raphael-2.1.4.min.js') }}"></script>
+<script src="{{ asset('vendors/justgage/justgage.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.cookie.js') }}" type="text/javascript"></script>
 <!-- Custom js for this page-->
 {{-- <script src="{{ asset ('assets/js/dashboard.js') }}"></script> --}}
-<script src="{{ URl('assets/js/jnoty.min.js') }}"></script>
-<script src="{{ URl('assets/js/admin-datatable.js') }}"></script>
+<script src="{{ asset('assets/js/jnoty.min.js') }}"></script>
+<script src="{{ asset('assets/js/admin-datatable.js') }}"></script>
 
 <script>
     // remove wide space
