@@ -4,9 +4,9 @@
             <div class="navbar-menu-wrapper d-flex align-items-center justify-content-between">
                 <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
                     <a class="navbar-brand brand-logo" href="{{ url('/') }}"><img
-                            src="{{ asset('assets/images/logo/HMMBiz-logo.svg') }}" alt="logo" /></a>
+                            src="{{ url('assets/images/logo/HMMBiz-logo.svg') }}" alt="logo" /></a>
                     <a class="navbar-brand brand-logo-mini" href="{{ url('/') }}"><img
-                            src="{{ asset('assets/images/logo/HMMBiz-logo.svg') }}" alt="logo" /></a>
+                            src="{{ url('assets/images/logo/HMMBiz-logo.svg') }}" alt="logo" /></a>
                 </div>
                 <ul class="navbar-nav navbar-nav-right">
                     <li class="nav-item nav-profile dropdown">
@@ -17,7 +17,7 @@
                                 {{ ucfirst(session()->get('emp_login')['lname']) }}
                             </span>
                             <span class="online-status"></span>
-                            <img src="{{ asset('assets/images/logo/logo.png') }}" alt="profile" />
+                            <img src="{{ url('assets/images/logo/logo.png') }}" alt="profile" />
                         </a>
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
                             aria-labelledby="profileDropdown">
