@@ -20,9 +20,10 @@
     
     <style>
         :root {
-            --primary-color: #6366f1;
-            --primary-hover: #4f46e5;
-            --secondary-color: #64748b;
+            --primary-color: #1e3a8a;
+            --primary-hover: #1e40af;
+            --secondary-color: #f97316;
+            --secondary-hover: #ea580c;
             --success-color: #10b981;
             --error-color: #ef4444;
             --background-color: #f8fafc;
@@ -43,7 +44,7 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #f97316 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -73,7 +74,7 @@
         }
 
         .login-header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             padding: 40px 30px;
             text-align: center;
             color: white;
@@ -96,8 +97,9 @@
         }
 
         .logo img {
-            width: 35px;
-            height: 35px;
+            width: 45px;
+            height: auto;
+            max-height: 35px;
             filter: brightness(0) invert(1);
         }
 
@@ -189,7 +191,7 @@
         .btn-login {
             width: 100%;
             padding: 14px 24px;
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             border: none;
             border-radius: 12px;
             color: white;
@@ -246,7 +248,7 @@
         }
 
         .forgot-password a:hover {
-            color: var(--primary-hover);
+            color: var(--secondary-color);
         }
 
         .error-message {
@@ -359,7 +361,7 @@
         <div class="login-header">
             <div class="logo-container">
                 <div class="logo">
-                    <img src="{{ asset('assets/images/logo/logo.png') }}" alt="IMS Logo">
+                    <img src="{{ asset('assets/images/logo/HMMBiz-logo.svg') }}" alt="HMMBiz Logo">
                 </div>
             </div>
             <div class="welcome-text">
