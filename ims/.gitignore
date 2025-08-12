@@ -1,3 +1,27 @@
 ims/ims.zip
 ims/ims.zip
 ims/ims.zip
+
+# Laravel .env files
+.env
+.env.backup
+.env.production
+
+# Laravel storage and cache
+/storage/*.key
+/vendor
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/storage/logs/*.log
+
+# IDE files
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
