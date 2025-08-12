@@ -270,7 +270,7 @@ class LogInController extends Controller
     {
         $check = Employee::where('pass_token', $token)->first();
         if ($check) {
-            return view('ims/login/new-password', ['token' => $token]);
+            return view('ims/login/modern-new-password', ['token' => $token]);
         } else {
             session()->flash('notification', ['type' => 'danger', 'message' => "Password reset link has expired."]);
             return redirect('/');
