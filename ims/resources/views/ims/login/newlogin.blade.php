@@ -38,9 +38,9 @@
 </section> --}}
 
     <section id="login-section">
-        <img class="circle-1" src="{{ URL('assets/images/login-svg-1.svg') }}" alt="">
-        <img class="circle-2" src="{{ URL('assets/images/login-svg-2.svg') }}" alt="">
-        <img class="newlogin-logo" src="{{ URL('assets/images/logo/logo.png') }}" alt="">
+        <img class="circle-1" src="{{ asset('assets/images/login-svg-1.svg') }}" alt="">
+        <img class="circle-2" src="{{ asset('assets/images/login-svg-2.svg') }}" alt="">
+        <img class="newlogin-logo" src="{{ asset('assets/images/logo/logo.png') }}" alt="">
 
         <div class="container-fluid">
             <div class="row ">
@@ -89,7 +89,7 @@
                 </div>
             </div>
         </div>
-        <img class="circle-3" src="{{ URL('assets/images/login-svg-3.svg') }}" alt="">
+        <img class="circle-3" src="{{ asset('assets/images/login-svg-3.svg') }}" alt="">
     </section>
     <x-footer />
 

@@ -28,7 +28,7 @@
 <body id="login-body">
     <section id="login" class="desk-section">
         <div class="login-logo d-flex align-content-center">
-            <img class="login-img" src="{{ URL('assets/images/logo/logo.png') }}" alt="">
+            <img class="login-img" src="{{ asset('assets/images/logo/logo.png') }}" alt="">
         </div>
         <div class="container form-container">
             <div class="row form-row align-content-center">

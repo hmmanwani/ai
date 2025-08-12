@@ -105,7 +105,7 @@
                                                                                                                             border="0"
                                                                                                                             class=""
                                                                                                                             hspace="0"
-                                                                                                                            src="{{ URL('assets/images/logo/HMMBiz-Logo.png') }}"
+                                                                                                                            src="{{ asset('assets/images/logo/HMMBiz-Logo.png') }}"
                                                                                                                             style="-ms-interpolation-mode: bicubic;max-width: 100%;width:30%;min-width: 30%;"
                                                                                                                             vspace="0"
                                                                                                                             width="263">

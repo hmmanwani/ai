@@ -24,7 +24,7 @@
                                                 <div class="col-md-3 pe-0  mb-4">
                                                     <div class="list-group mx-4" id="list-tab" role="tablist">
                                                         <div class="profile-picture d-flex justify-content-center">
-                                                            <img src="{{ URL('assets\images\logo\logo.png') }}"
+                                                            <img src="{{ asset('assets\images\logo\logo.png') }}"
                                                                 class="w-50  me-2 my-4 ms-2" alt="">
                                                         </div>
                                                         <h3 class="text-center  f-700">

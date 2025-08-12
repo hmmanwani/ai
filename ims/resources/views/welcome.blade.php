@@ -11,7 +11,7 @@
 
 
     {{-- icon  --}}
-    <link rel="shortcut icon" href="{{ URL('assets/images/logo/logo.png') }}" />
+    <link rel="shortcut icon" href="{{ asset('assets/images/logo/logo.png') }}" />
     {{-- google font  --}}
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     {{-- chosen css  --}}
@@ -42,11 +42,11 @@
     {{-- vendoes and template css  --}}
     <link rel="stylesheet" href="{{ URL('vendors/base/vendor.bundle.base.css') }}">
     <link rel="stylesheet" href="{{ URL('vendors/mdi/css/materialdesignicons.min.css') }}">
-    <link rel="stylesheet" href="{{ URL('assets/css/panel.css?v1') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/panel.css?v1') }}">
     {{-- jnoty css  --}}
-    <link rel="stylesheet" href="{{ URL('assets/css/jnoty.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/jnoty.min.css') }}">
     {{-- custom css --}}
-    <link rel="stylesheet" href="{{ URL('assets/css/mystyle.css?v8') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/mystyle.css?v8') }}">
     {{-- popper js  --}}
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     {{-- title  --}}
@@ -96,11 +96,11 @@
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@16.0.3/build/js/utils.js"></script>
     <script src="{{ URl('vendors/justgage/raphael-2.1.4.min.js') }}"></script>
     <script src="{{ URl('vendors/justgage/justgage.js') }}"></script>
-    <script src="{{ URl('assets/js/jquery.cookie.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets/js/jquery.cookie.js') }}" type="text/javascript"></script>
     <!-- Custom js for this page-->
     {{-- <script src="{{ asset ('assets/js/dashboard.js') }}"></script> --}}
-    <script src="{{ URl('assets/js/jnoty.min.js') }}"></script>
-    <script src="{{ URl('assets/js/admin-datatable.js') }}"></script>
+    <script src="{{ asset('assets/js/jnoty.min.js') }}"></script>
+    <script src="{{ asset('assets/js/admin-datatable.js') }}"></script>
 
     <!-- Initialize Flatpickr -->
     <script>

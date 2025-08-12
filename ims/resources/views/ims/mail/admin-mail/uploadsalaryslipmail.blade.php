@@ -27,7 +27,7 @@
 
     <section>
         <div class="logo">
-            <img src="{{ URL('assets/images/logo/HMMBiz-Logo.png') }}">
+            <img src="{{ asset('assets/images/logo/HMMBiz-Logo.png') }}">
         </div>
         <div style="margin-top: 50px;">
             <h3>hi <strong>{{ $data['name'] }}</strong>,</h3>

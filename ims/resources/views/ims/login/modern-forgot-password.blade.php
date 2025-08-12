@@ -7,7 +7,7 @@
     <title>IMS | Forgot Password</title>
     
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ URL('assets/images/logo/logo.png') }}" />
+    <link rel="shortcut icon" href="{{ asset('assets/images/logo/logo.png') }}" />
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -342,7 +342,7 @@
         <div class="forgot-header">
             <div class="logo-container">
                 <div class="logo">
-                    <img src="{{ URL('assets/images/logo/logo.png') }}" alt="IMS Logo">
+                    <img src="{{ asset('assets/images/logo/logo.png') }}" alt="IMS Logo">
                 </div>
             </div>
             <div class="welcome-text">
