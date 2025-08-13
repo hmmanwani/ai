@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - Truvio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Truvio</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="categories.html" class="nav-link active">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="header-content">
+                <h1>Product Categories</h1>
+                <p>Explore our comprehensive range of interior materials</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search-input" placeholder="Search products, categories, or keywords...">
+                </div>
+                <div class="search-filters">
+                    <select id="category-filter">
+                        <option value="">All Categories</option>
+                        <option value="electrical">Electrical</option>
+                        <option value="surfaces">Surfaces & Panelling</option>
+                        <option value="finishes">Finishes & Paints</option>
+                        <option value="flooring">Flooring</option>
+                        <option value="ceiling">Ceiling</option>
+                        <option value="wood">Wood</option>
+                        <option value="hardware">Hardware</option>
+                    </select>
+                    <select id="price-filter">
+                        <option value="">All Prices</option>
+                        <option value="0-1000">Under ₹1,000</option>
+                        <option value="1000-5000">₹1,000 - ₹5,000</option>
+                        <option value="5000-10000">₹5,000 - ₹10,000</option>
+                        <option value="10000+">Above ₹10,000</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="categories-layout">
+        <div class="container">
+            <div class="categories-content">
+                <!-- Categories Grid -->
+                <div class="categories-main">
+                    <!-- Electrical Category -->
+                    <section id="electrical" class="category-section">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="category-info">
+                                <h2>Electrical</h2>
+                                <p>Complete electrical solutions including switches, sockets, lighting, and wiring accessories.</p>
+                            </div>
+                        </div>
+                        <div class="products-grid">
+                            <div class="product-card" data-category="electrical" data-price="2500">
+                                <div class="product-image">
+                                    <div class="product-placeholder"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Premium LED Lights</h3>
+                                    <p>Energy-efficient lighting solutions for modern homes</p>
+                                    <div class="product-meta">
+                                        <span class="category">Electrical</span>
+                                        <span class="price">₹2,500</span>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="addToSelection('led-lights', 'Premium LED Lights', 2500)">Add to Selection</button>
+                                </div>
+                            </div>
+                            <div class="product-card" data-category="electrical" data-price="1800">
+                                <div class="product-image">
+                                    <div class="product-placeholder"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Smart Switches</h3>
+                                    <p>WiFi-enabled smart switches for home automation</p>
+                                    <div class="product-meta">
+                                        <span class="category">Electrical</span>
+                                        <span class="price">₹1,800</span>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="addToSelection('smart-switches', 'Smart Switches', 1800)">Add to Selection</button>
+                                </div>
+                            </div>
+                            <div class="product-card" data-category="electrical" data-price="3200">
+                                <div class="product-image">
+                                    <div class="product-placeholder"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Ceiling Fans</h3>
+                                    <p>Energy-efficient ceiling fans with remote control</p>
+                                    <div class="product-meta">
+                                        <span class="category">Electrical</span>
+                                        <span class="price">₹3,200</span>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="addToSelection('ceiling-fans', 'Ceiling Fans', 3200)">Add to Selection</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Surfaces & Panelling Category -->
+                    <section id="surfaces" class="category-section">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <div class="category-info">
+                                <h2>Surfaces & Panelling</h2>
+                                <p>Premium wall panels, cladding materials, and surface solutions for modern interiors.</p>
+                            </div>
+                        </div>
+                        <div class="products-grid">
+                            <div class="product-card" data-category="surfaces" data-price="4500">
+                                <div class="product-image">
+                                    <div class="product-placeholder"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Wall Panels</h3>
+                                    <p>Modern 3D wall panels for accent walls</p>
+                                    <div class="product-meta">
+                                        <span class="category">Surfaces</span>
+                                        <span class="price">₹4,500</span>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="addToSelection('wall-panels', 'Wall Panels', 4500)">Add to Selection</button>
+                                </div>
+                            </div>
+                            <div class="product-card" data-category="surfaces" data-price="6800">
+                                <div class="product-image">
+                                    <div class="product-placeholder"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>PVC Cladding</h3>
+                                    <p>Durable PVC cladding for exterior and interior walls</p>
+                                    <div class="product-meta">
+                                        <span class="category">Surfaces</span>
+                                        <span class="price">₹6,800</span>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="addToSelection('pvc-cladding', 'PVC Cladding', 6800)">Add to Selection</button>
+                                </div>
+                            </div>
+                            <div class="product-card" data-category="surfaces" data-price="3500">
+                                <div class="product-image">
+                                    <div class="product-placeholder"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Acoustic Panels</h3>
+                                    <p>Sound-absorbing panels for better acoustics</p>
+                                    <div class="product-meta">
+                                        <span class="category">Surfaces</span>
+                                        <span class="price">₹3,500</span>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="addToSelection('acoustic-panels', 'Acoustic Panels', 3500)">Add to Selection</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Finishes & Paints Category -->
+                    <section id="finishes" class="category-section">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <div class="category-info">
+                                <h2>Finishes & Paints</h2>
+                                <p>High-quality paints, finishes, and decorative materials to add the perfect touch.</p>
+                            </div>
+                        </div>
+                        <div class="products-grid">
+                            <div class="product-card" data-category="finishes" data-price="1200">
+                                <div class="product-image">
+                                    <div class="product-placeholder"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Premium Paints</h3>
+                                    <p>Long-lasting interior and exterior paints</p>
+                                    <div class="product-meta">
+                                        <span class="category">Finishes</span>
+                                        <span class="price">₹1,200</span>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="addToSelection('premium-paints', 'Premium Paints', 1200)">Add to Selection</button>
+                                </div>
+                            </div>
+                            <div class="product-card" data-category="finishes" data-price="2800">
+                                <div class="product-image">
+                                    <div class="product-placeholder"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Textured Finishes</h3>
+                                    <p>Decorative textured wall finishes</p>
+                                    <div class="product-meta">
+                                        <span class="category">Finishes</span>
+                                        <span class="price">₹2,800</span>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="addToSelection('textured-finishes', 'Textured Finishes', 2800)">Add to Selection</button>
+                                </div>
+                            </div>
+                            <div class="product-card" data-category="finishes" data-price="1500">
+                                <div class="product-image">
+                                    <div class="product-placeholder"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Primers & Sealers</h3>
+                                    <p>High-quality primers for better paint adhesion</p>
+                                    <div class="product-meta">
+                                        <span class="category">Finishes</span>
+                                        <span class="price">₹1,500</span>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="addToSelection('primers-sealers', 'Primers & Sealers', 1500)">Add to Selection</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Flooring Category -->
+                    <section id="flooring" class="category-section">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-square"></i>
+                            </div>
+                            <div class="category-info">
+                                <h2>Flooring</h2>
+                                <p>Durable and stylish flooring options including tiles, wood, laminate, and more.</p>
+                            </div>
+                        </div>
+                        <div class="products-grid">
+                            <div class="product-card" data-category="flooring" data-price="8500">
+                                <div class="product-image">
+                                    <div class="product-placeholder"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Marble Effect Tiles</h3>
+                                    <p>Elegant porcelain tiles with marble finish</p>
+                                    <div class="product-meta">
+                                        <span class="category">Flooring</span>
+                                        <span class="price">₹8,500</span>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="addToSelection('marble-tiles', 'Marble Effect Tiles', 8500)">Add to Selection</button>
+                                </div>
+                            </div>
+                            <div class="product-card" data-category="flooring" data-price="12000">
+                                <div class="product-image">
+                                    <div class="product-placeholder"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Engineered Wood</h3>
+                                    <p>Premium engineered wood flooring</p>
+                                    <div class="product-meta">
+                                        <span class="category">Flooring</span>
+                                        <span class="price">₹12,000</span>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="addToSelection('engineered-wood', 'Engineered Wood', 12000)">Add to Selection</button>
+                                </div>
+                            </div>
+                            <div class="product-card" data-category="flooring" data-price="5500">
+                                <div class="product-image">
+                                    <div class="product-placeholder"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Laminate Flooring</h3>
+                                    <p>Durable laminate flooring in various designs</p>
+                                    <div class="product-meta">
+                                        <span class="category">Flooring</span>
+                                        <span class="price">₹5,500</span>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="addToSelection('laminate-flooring', 'Laminate Flooring', 5500)">Add to Selection</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Ceiling Category -->
+                    <section id="ceiling" class="category-section">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-arrow-up"></i>
+                            </div>
+                            <div class="category-info">
+                                <h2>Ceiling</h2>
+                                <p>Modern ceiling solutions including panels, tiles, and decorative elements.</p>
+                            </div>
+                        </div>
+                        <div class="products-grid">
+                            <div class="product-card" data-category="ceiling" data-price="4200">
+                                <div class="product-image">
+                                    <div class="product-placeholder"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Gypsum Ceiling</h3>
+                                    <p>Lightweight gypsum ceiling panels</p>
+                                    <div class="product-meta">
+                                        <span class="category">Ceiling</span>
+                                        <span class="price">₹4,200</span>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="addToSelection('gypsum-ceiling', 'Gypsum Ceiling', 4200)">Add to Selection</button>
+                                </div>
+                            </div>
+                            <div class="product-card" data-category="ceiling" data-price="3800">
+                                <div class="product-image">
+                                    <div class="product-placeholder"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>PVC Ceiling</h3>
+                                    <p>Moisture-resistant PVC ceiling tiles</p>
+                                    <div class="product-meta">
+                                        <span class="category">Ceiling</span>
+                                        <span class="price">₹3,800</span>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="addToSelection('pvc-ceiling', 'PVC Ceiling', 3800)">Add to Selection</button>
+                                </div>
+                            </div>
+                            <div class="product-card" data-category="ceiling" data-price="6500">
+                                <div class="product-image">
+                                    <div class="product-placeholder"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Decorative Ceiling</h3>
+                                    <p>Ornate decorative ceiling elements</p>
+                                    <div class="product-meta">
+                                        <span class="category">Ceiling</span>
+                                        <span class="price">₹6,500</span>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="addToSelection('decorative-ceiling', 'Decorative Ceiling', 6500)">Add to Selection</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Wood Category -->
+                    <section id="wood" class="category-section">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-tree"></i>
+                            </div>
+                            <div class="category-info">
+                                <h2>Wood</h2>
+                                <p>Premium wood products including plywood, MDF, and engineered wood solutions.</p>
+                            </div>
+                        </div>
+                        <div class="products-grid">
+                            <div class="product-card" data-category="wood" data-price="7500">
+                                <div class="product-image">
+                                    <div class="product-placeholder"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Premium Plywood</h3>
+                                    <p>High-quality plywood for furniture and construction</p>
+                                    <div class="product-meta">
+                                        <span class="category">Wood</span>
+                                        <span class="price">₹7,500</span>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="addToSelection('premium-plywood', 'Premium Plywood', 7500)">Add to Selection</button>
+                                </div>
+                            </div>
+                            <div class="product-card" data-category="wood" data-price="4800">
+                                <div class="product-image">
+                                    <div class="product-placeholder"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>MDF Boards</h3>
+                                    <p>Medium density fiberboard for various applications</p>
+                                    <div class="product-meta">
+                                        <span class="category">Wood</span>
+                                        <span class="price">₹4,800</span>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="addToSelection('mdf-boards', 'MDF Boards', 4800)">Add to Selection</button>
+                                </div>
+                            </div>
+                            <div class="product-card" data-category="wood" data-price="9200">
+                                <div class="product-image">
+                                    <div class="product-placeholder"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Solid Wood</h3>
+                                    <p>Natural solid wood for premium applications</p>
+                                    <div class="product-meta">
+                                        <span class="category">Wood</span>
+                                        <span class="price">₹9,200</span>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="addToSelection('solid-wood', 'Solid Wood', 9200)">Add to Selection</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Hardware Category -->
+                    <section id="hardware" class="category-section">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div class="category-info">
+                                <h2>Hardware</h2>
+                                <p>Complete hardware solutions including hinges, handles, locks, and fittings.</p>
+                            </div>
+                        </div>
+                        <div class="products-grid">
+                            <div class="product-card" data-category="hardware" data-price="1800">
+                                <div class="product-image">
+                                    <div class="product-placeholder"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Cabinet Handles</h3>
+                                    <p>Modern cabinet handles and knobs</p>
+                                    <div class="product-meta">
+                                        <span class="category">Hardware</span>
+                                        <span class="price">₹1,800</span>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="addToSelection('cabinet-handles', 'Cabinet Handles', 1800)">Add to Selection</button>
+                                </div>
+                            </div>
+                            <div class="product-card" data-category="hardware" data-price="2500">
+                                <div class="product-image">
+                                    <div class="product-placeholder"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Door Locks</h3>
+                                    <p>High-security door locks and latches</p>
+                                    <div class="product-meta">
+                                        <span class="category">Hardware</span>
+                                        <span class="price">₹2,500</span>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="addToSelection('door-locks', 'Door Locks', 2500)">Add to Selection</button>
+                                </div>
+                            </div>
+                            <div class="product-card" data-category="hardware" data-price="1200">
+                                <div class="product-image">
+                                    <div class="product-placeholder"></div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Hinges</h3>
+                                    <p>Durable hinges for doors and cabinets</p>
+                                    <div class="product-meta">
+                                        <span class="category">Hardware</span>
+                                        <span class="price">₹1,200</span>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="addToSelection('hinges', 'Hinges', 1200)">Add to Selection</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Selection Sidebar -->
+                <div class="selection-sidebar">
+                    <div class="sidebar-header">
+                        <h3>Selected Products</h3>
+                        <span class="product-count">0 items</span>
+                    </div>
+                    <div class="selected-products-list">
+                        <!-- Selected products will be added here dynamically -->
+                    </div>
+                    <div class="selection-total">
+                        Total: ₹0
+                    </div>
+                    <div class="sidebar-actions">
+                        <button class="btn btn-secondary" onclick="clearSelection()">Clear All</button>
+                        <button class="btn btn-primary" onclick="requestQuote()">Request Quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Truvio</h3>
+                    <p>Your one-stop solution for all home interior materials.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#electrical">Electrical</a></li>
+                        <li><a href="#surfaces">Surfaces & Panelling</a></li>
+                        <li><a href="#finishes">Finishes & Paints</a></li>
+                        <li><a href="#flooring">Flooring</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> contact@truvio.in</p>
+                        <p><i class="fas fa-phone"></i> +91 8585857018</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Ahmedabad, Gujarat</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Truvio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
