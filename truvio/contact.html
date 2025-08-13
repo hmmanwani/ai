@@ -6,21 +6,21 @@
     <title>Contact Us - Truvio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>Truvio</h2>
+                <h2>TRUVIO</h2>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="index.html" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="about.html" class="nav-link">About</a>
                 </li>
                 <li class="nav-item">
                     <a href="categories.html" class="nav-link">Categories</a>
@@ -29,7 +29,7 @@
                     <a href="contact.html" class="nav-link active">Contact</a>
                 </li>
             </ul>
-            <div class="hamburger">
+            <div class="nav-toggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -37,177 +37,224 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
+    <!-- Hero Section -->
+    <section class="page-hero">
         <div class="container">
-            <div class="header-content">
+            <div class="page-hero-content">
                 <h1>Contact Us</h1>
-                <p>Get in touch with us for all your interior material needs</p>
+                <p>Get in touch with our experts for all your construction material needs</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Information -->
-    <section class="contact-info-section">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3>Visit Us</h3>
-                    <p>123 Interior Plaza<br>Navrangpura, Ahmedabad<br>Gujarat 380009</p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <h3>Call Us</h3>
-                    <p>+91 8585857018<br>+91 9876543210<br>Mon-Sat: 9:00 AM - 7:00 PM</p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3>Email Us</h3>
-                    <p>contact@truvio.in<br>sales@truvio.in<br>support@truvio.in</p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3>Business Hours</h3>
-                    <p>Monday - Saturday<br>9:00 AM - 7:00 PM<br>Sunday: Closed</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Form & Map -->
-    <section class="contact-form-section">
+    <!-- Contact Main Content -->
+    <div class="contact-main">
         <div class="container">
             <div class="contact-layout">
-                <!-- Contact Form -->
-                <div class="contact-form-container">
-                    <div class="form-header">
-                        <h2>Send us a Message</h2>
-                        <p>Fill out the form below and we'll get back to you within 24 hours</p>
+                <!-- Contact Information -->
+                <div class="contact-info-section">
+                    <div class="section-header">
+                        <h2>Get in Touch</h2>
+                        <p>We're here to help you with your construction material requirements</p>
                     </div>
-                    <form id="contact-form" class="contact-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Full Name *</label>
-                                <input type="text" id="name" name="name" required>
+                    
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
                             </div>
-                            <div class="form-group">
-                                <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone">
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Subject *</label>
-                                <select id="subject" name="subject" required>
-                                    <option value="">Select a subject</option>
-                                    <option value="general">General Inquiry</option>
-                                    <option value="quotation">Request Quotation</option>
-                                    <option value="product">Product Information</option>
-                                    <option value="support">Technical Support</option>
-                                    <option value="partnership">Partnership</option>
-                                </select>
+                            <div class="contact-details">
+                                <h4>Visit Our Office</h4>
+                                <p>123 Construction Avenue<br>
+                                Building Materials District<br>
+                                Mumbai, Maharashtra 400001<br>
+                                India</p>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="category">Product Category (Optional)</label>
-                            <select id="category" name="category">
-                                <option value="">Select category</option>
-                                <option value="electrical">Electrical</option>
-                                <option value="surfaces">Surfaces & Panelling</option>
-                                <option value="finishes">Finishes & Paints</option>
-                                <option value="flooring">Flooring</option>
-                                <option value="ceiling">Ceiling</option>
-                                <option value="wood">Wood</option>
-                                <option value="hardware">Hardware</option>
-                            </select>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Call Us</h4>
+                                <p><a href="tel:+919876543210">+91 98765 43210</a><br>
+                                <a href="tel:+912233445566">+91 22 3344 5566</a><br>
+                                <small>Mon - Sat: 9:00 AM - 6:00 PM</small></p>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project or inquiry..."></textarea>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email Us</h4>
+                                <p><a href="mailto:info@truvio.in">info@truvio.in</a><br>
+                                <a href="mailto:sales@truvio.in">sales@truvio.in</a><br>
+                                <a href="mailto:support@truvio.in">support@truvio.in</a></p>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" id="newsletter" name="newsletter">
-                                <span class="checkmark"></span>
-                                Subscribe to our newsletter for updates and offers
-                            </label>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-
-                <!-- Map & Additional Info -->
-                <div class="contact-sidebar">
-                    <div class="map-container">
-                        <h3>Our Location</h3>
-                        <div class="map-placeholder">
-                            <div class="map-content">
-                                <i class="fas fa-map-marked-alt"></i>
-                                <p>123 Interior Plaza<br>Navrangpura, Ahmedabad<br>Gujarat 380009</p>
-                                <a href="https://maps.google.com" target="_blank" class="btn btn-secondary">View on Google Maps</a>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Business Hours</h4>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                Saturday: 9:00 AM - 4:00 PM<br>
+                                Sunday: Closed<br>
+                                <small>Emergency support available 24/7</small></p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="quick-contact">
-                        <h3>Quick Contact</h3>
-                        <div class="quick-contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <strong>Call Now</strong>
-                                <p>+91 8585857018</p>
-                            </div>
-                        </div>
-                        <div class="quick-contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <strong>Email Us</strong>
-                                <p>contact@truvio.in</p>
-                            </div>
-                        </div>
-                        <div class="quick-contact-item">
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <strong>Visit Us</strong>
-                                <p>Mon-Sat: 9:00 AM - 7:00 PM</p>
+                    <!-- Map Section -->
+                    <div class="map-section">
+                        <h3>Find Us on Map</h3>
+                        <div class="map-container">
+                            <div class="map-placeholder">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <h4>Interactive Map</h4>
+                                <p>Our office location in Mumbai</p>
+                                <button class="map-btn" onclick="openMap()">
+                                    <i class="fas fa-directions"></i>
+                                    Get Directions
+                                </button>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="social-contact">
-                        <h3>Follow Us</h3>
-                        <div class="social-links">
-                            <a href="#" class="social-link">
-                                <i class="fab fa-facebook"></i>
-                                <span>Facebook</span>
-                            </a>
-                            <a href="#" class="social-link">
-                                <i class="fab fa-instagram"></i>
-                                <span>Instagram</span>
-                            </a>
-                            <a href="#" class="social-link">
-                                <i class="fab fa-twitter"></i>
-                                <span>Twitter</span>
-                            </a>
-                            <a href="#" class="social-link">
-                                <i class="fab fa-linkedin"></i>
-                                <span>LinkedIn</span>
-                            </a>
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <div class="form-container">
+                        <div class="form-header">
+                            <h3>Send Us a Message</h3>
+                            <p>Fill out the form below and we'll get back to you within 24 hours</p>
                         </div>
+                        
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company">Company Name</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="projectType">Project Type</label>
+                                <select id="projectType" name="projectType">
+                                    <option value="">Select project type</option>
+                                    <option value="residential">Residential</option>
+                                    <option value="commercial">Commercial</option>
+                                    <option value="industrial">Industrial</option>
+                                    <option value="renovation">Renovation</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="budget">Estimated Budget</label>
+                                <select id="budget" name="budget">
+                                    <option value="">Select budget range</option>
+                                    <option value="under-1l">Under ₹1 Lakh</option>
+                                    <option value="1l-5l">₹1 - 5 Lakhs</option>
+                                    <option value="5l-10l">₹5 - 10 Lakhs</option>
+                                    <option value="10l-25l">₹10 - 25 Lakhs</option>
+                                    <option value="25l-50l">₹25 - 50 Lakhs</option>
+                                    <option value="above-50l">Above ₹50 Lakhs</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="timeline">Project Timeline</label>
+                                <select id="timeline" name="timeline">
+                                    <option value="">Select timeline</option>
+                                    <option value="immediate">Immediate (Within 1 week)</option>
+                                    <option value="1month">Within 1 month</option>
+                                    <option value="3months">Within 3 months</option>
+                                    <option value="6months">Within 6 months</option>
+                                    <option value="planning">Still planning</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Tell us about your project requirements, selected products, or any questions you have..." required></textarea>
+                            </div>
+                            
+                            <!-- Selected Products Display -->
+                            <div id="selectedProductsDisplay" class="selected-products-display" style="display: none;">
+                                <h4>Selected Products</h4>
+                                <div id="selectedProductsList"></div>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <span class="checkmark"></span>
+                                    Subscribe to our newsletter for updates and special offers
+                                </label>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="privacy" name="privacy" required>
+                                    <span class="checkmark"></span>
+                                    I agree to the <a href="#" class="privacy-link">Privacy Policy</a> and <a href="#" class="privacy-link">Terms of Service</a> *
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Contact Section -->
+    <section class="quick-contact">
+        <div class="container">
+            <div class="quick-contact-content">
+                <div class="quick-contact-text">
+                    <h2>Need Immediate Assistance?</h2>
+                    <p>Our experts are ready to help you with urgent requirements and technical consultations</p>
+                </div>
+                <div class="quick-contact-actions">
+                    <a href="tel:+919876543210" class="quick-contact-btn">
+                        <i class="fas fa-phone"></i>
+                        Call Now
+                    </a>
+                    <a href="https://wa.me/919876543210" class="quick-contact-btn whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp
+                    </a>
                 </div>
             </div>
         </div>
@@ -218,76 +265,67 @@
         <div class="container">
             <div class="section-header">
                 <h2>Frequently Asked Questions</h2>
-                <p>Find answers to common questions about our products and services</p>
+                <p>Quick answers to common questions about our services</p>
             </div>
             <div class="faq-grid">
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>What are your delivery options?</h3>
-                        <i class="fas fa-chevron-down"></i>
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>What is your minimum order quantity?</h4>
+                        <i class="fas fa-plus"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>We offer free delivery within Ahmedabad city limits for orders above ₹10,000. For other locations, delivery charges are calculated based on distance and order value. We also provide installation services for most products.</p>
+                        <p>We accommodate orders of all sizes, from small residential projects to large commercial developments. There's no strict minimum order quantity, but bulk orders receive better pricing.</p>
                     </div>
                 </div>
+                
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Do you provide installation services?</h3>
-                        <i class="fas fa-chevron-down"></i>
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>Do you provide delivery services?</h4>
+                        <i class="fas fa-plus"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Yes, we provide professional installation services for most of our products. Our team of experienced technicians ensures proper installation and quality workmanship. Installation charges vary based on the product and complexity.</p>
+                        <p>Yes, we provide reliable delivery services across Mumbai and surrounding areas. Delivery charges depend on location and order size. Free delivery is available for orders above certain thresholds.</p>
                     </div>
                 </div>
+                
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>What is your return policy?</h3>
-                        <i class="fas fa-chevron-down"></i>
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>What payment methods do you accept?</h4>
+                        <i class="fas fa-plus"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>We offer a 7-day return policy for most products in their original packaging. Custom or made-to-order items are non-returnable. Damaged or defective products are replaced or refunded as per warranty terms.</p>
+                        <p>We accept cash, bank transfers, UPI, credit/debit cards, and cheques. For large orders, we can arrange flexible payment terms and credit facilities for established clients.</p>
                     </div>
                 </div>
+                
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Do you offer bulk discounts?</h3>
-                        <i class="fas fa-chevron-down"></i>
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>Do you offer technical consultation?</h4>
+                        <i class="fas fa-plus"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Yes, we offer attractive bulk discounts for large orders. Discounts vary based on order value and product category. Contact our sales team for custom pricing and volume discounts.</p>
+                        <p>Absolutely! Our experienced team provides free technical consultation to help you choose the right materials for your project. We can also assist with quantity estimation and specifications.</p>
                     </div>
                 </div>
+                
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Can I get samples before ordering?</h3>
-                        <i class="fas fa-chevron-down"></i>
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>What is your return and exchange policy?</h4>
+                        <i class="fas fa-plus"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Yes, we provide samples for most products. Sample charges are nominal and are adjusted against your final order. Visit our showroom or contact us to request samples.</p>
+                        <p>We offer returns and exchanges for unused materials within 7 days of delivery, subject to our terms and conditions. Custom-ordered items may have different return policies.</p>
                     </div>
                 </div>
+                
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>What payment methods do you accept?</h3>
-                        <i class="fas fa-chevron-down"></i>
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>How can I track my order?</h4>
+                        <i class="fas fa-plus"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>We accept cash, card payments, UPI, net banking, and all major digital payment methods. We also offer EMI options for orders above ₹5,000 through our partner banks.</p>
+                        <p>Once your order is confirmed, you'll receive a tracking number via SMS and email. You can also call our customer service team for real-time updates on your order status.</p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Start Your Project?</h2>
-                <p>Get a personalized quote for your interior project today</p>
-                <div class="cta-buttons">
-                    <a href="categories.html" class="btn btn-secondary">Browse Products</a>
-                    <a href="tel:+918585857018" class="btn btn-primary">Call Now</a>
                 </div>
             </div>
         </div>
@@ -298,20 +336,20 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Truvio</h3>
-                    <p>Your one-stop solution for all home interior materials.</p>
+                    <h3>TRUVIO</h3>
+                    <p>Building excellence with modern solutions. Your trusted partner for quality construction materials.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="categories.html">Categories</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
@@ -320,7 +358,7 @@
                     <h4>Categories</h4>
                     <ul>
                         <li><a href="categories.html#electrical">Electrical</a></li>
-                        <li><a href="categories.html#surfaces">Surfaces & Panelling</a></li>
+                        <li><a href="categories.html#surfaces">Surfaces & Paneling</a></li>
                         <li><a href="categories.html#finishes">Finishes & Paints</a></li>
                         <li><a href="categories.html#flooring">Flooring</a></li>
                     </ul>
@@ -328,18 +366,77 @@
                 <div class="footer-section">
                     <h4>Contact Info</h4>
                     <div class="contact-info">
-                        <p><i class="fas fa-envelope"></i> contact@truvio.in</p>
-                        <p><i class="fas fa-phone"></i> +91 8585857018</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Ahmedabad, Gujarat</p>
+                        <p><i class="fas fa-phone"></i> +91 (XXX) XXX-XXXX</p>
+                        <p><i class="fas fa-envelope"></i> info@truvio.in</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Your Address Here</p>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Truvio. All rights reserved.</p>
+                <p>&copy; 2024 Truvio. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Check for quote request and populate form
+        document.addEventListener('DOMContentLoaded', function() {
+            const quoteRequest = localStorage.getItem('truvio_quote_request');
+            if (quoteRequest) {
+                try {
+                    const data = JSON.parse(quoteRequest);
+                    displaySelectedProducts(data.products);
+                    
+                    // Pre-fill message
+                    const messageField = document.getElementById('message');
+                    if (messageField && data.products.length > 0) {
+                        const productList = data.products.map(p => `- ${p.name} (${p.category})`).join('\n');
+                        messageField.value = `I am interested in getting a quote for the following products:\n\n${productList}\n\nPlease provide detailed pricing and availability information.`;
+                    }
+                } catch (e) {
+                    console.error('Error parsing quote request:', e);
+                }
+            }
+        });
+        
+        function displaySelectedProducts(products) {
+            const display = document.getElementById('selectedProductsDisplay');
+            const list = document.getElementById('selectedProductsList');
+            
+            if (products && products.length > 0) {
+                display.style.display = 'block';
+                list.innerHTML = products.map(product => 
+                    `<div class="selected-product-tag">
+                        <span>${product.name}</span>
+                        <small>${product.category}</small>
+                    </div>`
+                ).join('');
+            }
+        }
+        
+        function openMap() {
+            // In a real implementation, this would open Google Maps or similar
+            window.open('https://maps.google.com/?q=Mumbai,Maharashtra,India', '_blank');
+        }
+        
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const answer = faqItem.querySelector('.faq-answer');
+            const icon = element.querySelector('i');
+            
+            faqItem.classList.toggle('active');
+            
+            if (faqItem.classList.contains('active')) {
+                answer.style.display = 'block';
+                icon.classList.remove('fa-plus');
+                icon.classList.add('fa-minus');
+            } else {
+                answer.style.display = 'none';
+                icon.classList.remove('fa-minus');
+                icon.classList.add('fa-plus');
+            }
+        }
+    </script>
 </body>
 </html>

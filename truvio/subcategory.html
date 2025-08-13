@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrical Products - Truvio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>TRUVIO</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="categories.html" class="nav-link">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="categories.html">Categories</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Electrical</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="subcategory-hero">
+        <div class="container">
+            <div class="subcategory-hero-content">
+                <div class="category-icon-large">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="hero-text">
+                    <h1>Electrical Products</h1>
+                    <p>Complete electrical solutions for modern construction projects. From basic wiring to smart automation systems.</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <strong>50+</strong>
+                            <span>Products</span>
+                        </div>
+                        <div class="stat">
+                            <strong>10+</strong>
+                            <span>Brands</span>
+                        </div>
+                        <div class="stat">
+                            <strong>24/7</strong>
+                            <span>Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subcategory Overview -->
+    <section class="subcategory-overview">
+        <div class="container">
+            <div class="overview-content">
+                <div class="overview-text">
+                    <h2>Electrical Solutions Overview</h2>
+                    <p>Our electrical product range encompasses everything you need for safe, efficient, and modern electrical installations. From residential wiring to commercial automation systems, we provide premium quality components that meet international standards.</p>
+                    
+                    <div class="key-features">
+                        <h3>Key Features & Benefits</h3>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <h4>Safety Certified</h4>
+                                    <p>All products meet ISI and international safety standards</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-leaf"></i>
+                                <div>
+                                    <h4>Energy Efficient</h4>
+                                    <p>Designed for optimal power consumption and sustainability</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-tools"></i>
+                                <div>
+                                    <h4>Easy Installation</h4>
+                                    <p>User-friendly designs for quick and reliable installation</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>Long Lasting</h4>
+                                    <p>Built for durability with extended warranty periods</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="overview-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-bolt"></i>
+                        <h4>Electrical Solutions</h4>
+                        <p>Professional-grade electrical components</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Subcategories -->
+    <section class="product-subcategories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Product Subcategories</h2>
+                <p>Explore our comprehensive range of electrical products organized by application</p>
+            </div>
+            
+            <div class="subcategories-grid">
+                <!-- Lighting Solutions -->
+                <div class="subcategory-card">
+                    <div class="subcategory-header">
+                        <div class="subcategory-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="subcategory-info">
+                            <h3>Lighting Solutions</h3>
+                            <p>LED panels, tubes, bulbs, and smart lighting systems</p>
+                        </div>
+                    </div>
+                    <div class="product-list">
+                        <div class="product-item" data-product="LED Panel Lights" data-category="electrical">
+                            <span class="product-name">LED Panel Lights</span>
+                            <span class="product-specs">36W, 48W, 72W variants</span>
+                            <button class="quick-add-btn" onclick="addProduct('LED Panel Lights', 'electrical')">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="product-item" data-product="LED Tube Lights" data-category="electrical">
+                            <span class="product-name">LED Tube Lights</span>
+                            <span class="product-specs">T8, T5 series</span>
+                            <button class="quick-add-btn" onclick="addProduct('LED Tube Lights', 'electrical')">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="product-item" data-product="Smart LED Bulbs" data-category="electrical">
+                            <span class="product-name">Smart LED Bulbs</span>
+                            <span class="product-specs">WiFi enabled, RGB</span>
+                            <button class="quick-add-btn" onclick="addProduct('Smart LED Bulbs', 'electrical')">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="product-item" data-product="Track Lighting" data-category="electrical">
+                            <span class="product-name">Track Lighting</span>
+                            <span class="product-specs">Adjustable spotlights</span>
+                            <button class="quick-add-btn" onclick="addProduct('Track Lighting', 'electrical')">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wiring & Cables -->
+                <div class="subcategory-card">
+                    <div class="subcategory-header">
+                        <div class="subcategory-icon">
+                            <i class="fas fa-ethernet"></i>
+                        </div>
+                        <div class="subcategory-info">
+                            <h3>Wiring & Cables</h3>
+                            <p>Power cables, data cables, and wiring accessories</p>
+                        </div>
+                    </div>
+                    <div class="product-list">
+                        <div class="product-item" data-product="PVC Insulated Cables" data-category="electrical">
+                            <span class="product-name">PVC Insulated Cables</span>
+                            <span class="product-specs">1.5mm to 25mm</span>
+                            <button class="quick-add-btn" onclick="addProduct('PVC Insulated Cables', 'electrical')">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="product-item" data-product="Armoured Cables" data-category="electrical">
+                            <span class="product-name">Armoured Cables</span>
+                            <span class="product-specs">Underground installation</span>
+                            <button class="quick-add-btn" onclick="addProduct('Armoured Cables', 'electrical')">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="product-item" data-product="Cat 6 Data Cables" data-category="electrical">
+                            <span class="product-name">Cat 6 Data Cables</span>
+                            <span class="product-specs">Gigabit ethernet</span>
+                            <button class="quick-add-btn" onclick="addProduct('Cat 6 Data Cables', 'electrical')">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="product-item" data-product="Cable Management" data-category="electrical">
+                            <span class="product-name">Cable Management</span>
+                            <span class="product-specs">Trays and conduits</span>
+                            <button class="quick-add-btn" onclick="addProduct('Cable Management', 'electrical')">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Switches & Sockets -->
+                <div class="subcategory-card">
+                    <div class="subcategory-header">
+                        <div class="subcategory-icon">
+                            <i class="fas fa-toggle-on"></i>
+                        </div>
+                        <div class="subcategory-info">
+                            <h3>Switches & Sockets</h3>
+                            <p>Smart switches, modular switches, and power outlets</p>
+                        </div>
+                    </div>
+                    <div class="product-list">
+                        <div class="product-item" data-product="Smart Switches" data-category="electrical">
+                            <span class="product-name">Smart Switches</span>
+                            <span class="product-specs">WiFi, voice control</span>
+                            <button class="quick-add-btn" onclick="addProduct('Smart Switches', 'electrical')">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="product-item" data-product="Modular Switches" data-category="electrical">
+                            <span class="product-name">Modular Switches</span>
+                            <span class="product-specs">1-4 way options</span>
+                            <button class="quick-add-btn" onclick="addProduct('Modular Switches', 'electrical')">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="product-item" data-product="Power Sockets" data-category="electrical">
+                            <span class="product-name">Power Sockets</span>
+                            <span class="product-specs">2-pin, 3-pin, USB</span>
+                            <button class="quick-add-btn" onclick="addProduct('Power Sockets', 'electrical')">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="product-item" data-product="Dimmer Switches" data-category="electrical">
+                            <span class="product-name">Dimmer Switches</span>
+                            <span class="product-specs">LED compatible</span>
+                            <button class="quick-add-btn" onclick="addProduct('Dimmer Switches', 'electrical')">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Distribution & Protection -->
+                <div class="subcategory-card">
+                    <div class="subcategory-header">
+                        <div class="subcategory-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="subcategory-info">
+                            <h3>Distribution & Protection</h3>
+                            <p>MCBs, RCCBs, distribution boards, and surge protectors</p>
+                        </div>
+                    </div>
+                    <div class="product-list">
+                        <div class="product-item" data-product="Distribution Panels" data-category="electrical">
+                            <span class="product-name">Distribution Panels</span>
+                            <span class="product-specs">6-24 way options</span>
+                            <button class="quick-add-btn" onclick="addProduct('Distribution Panels', 'electrical')">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="product-item" data-product="MCB Circuit Breakers" data-category="electrical">
+                            <span class="product-name">MCB Circuit Breakers</span>
+                            <span class="product-specs">6A to 63A rating</span>
+                            <button class="quick-add-btn" onclick="addProduct('MCB Circuit Breakers', 'electrical')">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="product-item" data-product="RCCB & RCBO" data-category="electrical">
+                            <span class="product-name">RCCB & RCBO</span>
+                            <span class="product-specs">Earth leakage protection</span>
+                            <button class="quick-add-btn" onclick="addProduct('RCCB & RCBO', 'electrical')">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="product-item" data-product="Surge Protectors" data-category="electrical">
+                            <span class="product-name">Surge Protectors</span>
+                            <span class="product-specs">Lightning protection</span>
+                            <button class="quick-add-btn" onclick="addProduct('Surge Protectors', 'electrical')">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Specifications -->
+    <section class="technical-specs">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technical Specifications</h2>
+                <p>Detailed specifications and compliance information for our electrical products</p>
+            </div>
+            
+            <div class="specs-grid">
+                <div class="spec-category">
+                    <h3>Standards & Certifications</h3>
+                    <ul class="spec-list">
+                        <li><i class="fas fa-check"></i> ISI Mark Certified</li>
+                        <li><i class="fas fa-check"></i> BIS Standards Compliant</li>
+                        <li><i class="fas fa-check"></i> IEC International Standards</li>
+                        <li><i class="fas fa-check"></i> CE Marking for Export Quality</li>
+                        <li><i class="fas fa-check"></i> RoHS Compliance for Environment Safety</li>
+                    </ul>
+                </div>
+                
+                <div class="spec-category">
+                    <h3>Technical Features</h3>
+                    <ul class="spec-list">
+                        <li><i class="fas fa-check"></i> Operating Temperature: -20°C to +70°C</li>
+                        <li><i class="fas fa-check"></i> Voltage Range: 220V - 440V AC</li>
+                        <li><i class="fas fa-check"></i> Frequency: 50Hz ± 5%</li>
+                        <li><i class="fas fa-check"></i> IP Rating: IP44 to IP65</li>
+                        <li><i class="fas fa-check"></i> Fire Retardant Materials</li>
+                    </ul>
+                </div>
+                
+                <div class="spec-category">
+                    <h3>Warranty & Support</h3>
+                    <ul class="spec-list">
+                        <li><i class="fas fa-check"></i> 2-5 Years Product Warranty</li>
+                        <li><i class="fas fa-check"></i> Free Installation Guidance</li>
+                        <li><i class="fas fa-check"></i> 24/7 Technical Support</li>
+                        <li><i class="fas fa-check"></i> Replacement Guarantee</li>
+                        <li><i class="fas fa-check"></i> Extended Warranty Available</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need Help Choosing the Right Products?</h2>
+                <p>Our electrical experts are here to help you select the perfect solutions for your project requirements</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-large">Get Expert Consultation</a>
+                    <a href="categories.html" class="btn btn-secondary btn-large">View All Categories</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TRUVIO</h3>
+                    <p>Building excellence with modern solutions. Your trusted partner for quality construction materials.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="categories.html#electrical">Electrical</a></li>
+                        <li><a href="categories.html#surfaces">Surfaces & Paneling</a></li>
+                        <li><a href="categories.html#finishes">Finishes & Paints</a></li>
+                        <li><a href="categories.html#flooring">Flooring</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +91 (XXX) XXX-XXXX</p>
+                        <p><i class="fas fa-envelope"></i> info@truvio.in</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Your Address Here</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Truvio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
