@@ -212,6 +212,8 @@ if (searchInput) {
 let selectedProducts = [];
 
 function addToSelection(productId, productName, productPrice) {
+    console.log('Adding to selection:', productId, productName, productPrice); // Debug log
+    
     if (!selectedProducts.find(p => p.id === productId)) {
         selectedProducts.push({ id: productId, name: productName, price: productPrice });
         updateSelectionSidebar();
@@ -230,26 +232,40 @@ function updateSelectionSidebar() {
     const sidebar = document.querySelector('.selection-sidebar');
     if (sidebar) {
         const productList = sidebar.querySelector('.selected-products-list');
-        productList.innerHTML = '';
+        const productCount = sidebar.querySelector('.product-count');
         
-        selectedProducts.forEach(product => {
-            const productItem = document.createElement('div');
-            productItem.className = 'selected-product-item';
-            productItem.innerHTML = `
-                <span>${product.name}</span>
-                <button onclick="removeFromSelection('${product.id}')" class="remove-btn">&times;</button>
-            `;
-            productList.appendChild(productItem);
-        });
+        if (productList) {
+            productList.innerHTML = '';
+            
+            selectedProducts.forEach(product => {
+                const productItem = document.createElement('div');
+                productItem.className = 'selected-product-item';
+                productItem.innerHTML = `
+                    <span>${product.name}</span>
+                    <button onclick="removeFromSelection('${product.id}')" class="remove-btn">&times;</button>
+                `;
+                productList.appendChild(productItem);
+            });
+        }
+        
+        // Update product count
+        if (productCount) {
+            productCount.textContent = `${selectedProducts.length} items`;
+        }
         
         // Update total
-        const total = selectedProducts.reduce((sum, product) => sum + product.price, 0);
-        sidebar.querySelector('.selection-total').textContent = `Total: ₹${total.toLocaleString()}`;
+        const totalElement = sidebar.querySelector('.selection-total');
+        if (totalElement) {
+            const total = selectedProducts.reduce((sum, product) => sum + product.price, 0);
+            totalElement.textContent = `Total: ₹${total.toLocaleString()}`;
+        }
     }
 }
 
-// Initialize tooltips for product cards
+// Initialize tooltips for product cards and selection system
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM loaded, initializing selection system...'); // Debug log
+    
     const productCards = document.querySelectorAll('.product-card');
     productCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
@@ -260,6 +276,39 @@ document.addEventListener('DOMContentLoaded', () => {
             this.style.transform = 'translateY(0) scale(1)';
         });
     });
+    
+    // Initialize selection sidebar
+    updateSelectionSidebar();
+    
+    // Add click event listeners to all "Add to Selection" buttons
+    const addButtons = document.querySelectorAll('.btn-primary');
+    addButtons.forEach(button => {
+        if (button.textContent.includes('Add to Selection')) {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const productCard = this.closest('.product-card');
+                if (productCard) {
+                    const productName = productCard.querySelector('h3').textContent;
+                    const productPrice = parseInt(productCard.dataset.price);
+                    const productId = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+                    
+                    addToSelection(productId, productName, productPrice);
+                }
+            });
+        }
+    });
+    
+    // Add event listeners for sidebar buttons
+    const clearBtn = document.getElementById('clear-selection-btn');
+    const quoteBtn = document.getElementById('request-quote-btn');
+    
+    if (clearBtn) {
+        clearBtn.addEventListener('click', clearSelection);
+    }
+    
+    if (quoteBtn) {
+        quoteBtn.addEventListener('click', requestQuote);
+    }
 });
 
 // Back to top button
@@ -345,6 +394,12 @@ function requestQuote() {
     
     window.location.href = `contact.html?message=${encodedMessage}`;
 }
+
+// Make functions globally available
+window.clearSelection = clearSelection;
+window.requestQuote = requestQuote;
+window.addToSelection = addToSelection;
+window.removeFromSelection = removeFromSelection;
 
 // Filter functionality
 const categoryFilter = document.querySelector('#category-filter');
